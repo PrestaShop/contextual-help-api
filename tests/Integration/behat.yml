@@ -1,0 +1,7 @@
+default:
+    suites:
+        all:
+            paths:
+                - "%paths.base%/Features/Scenario"
+            contexts:
+                - Tests\Integration\Features\Context\HttpRequestsContext
