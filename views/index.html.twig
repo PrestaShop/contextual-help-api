@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ pageInfos.language }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pageInfos.controller }}</title>
+    <link rel="stylesheet" href="/assets/css/doc.css">
+</head>
+<body>
+    <section id="content">
+        {{ body|raw }}
+    </section>
+    {% include 'ga-tracker.html.twig' %}
+</body>
+</html>

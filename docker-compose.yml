@@ -1,0 +1,20 @@
+version: '2.1'
+
+volumes:
+  var:
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "8008:80"
+    volumes:
+      - ./:/var/www
+    environment:
+      - APP_KEY=SomeRandomStringToAddSecurity123
+      - APP_ENV=development
+      - APP_DEBUG=true
+      - APACHE_RUN_USER=apache-www-volume
+      - APACHE_RUN_GROUP=apache-www-volume
