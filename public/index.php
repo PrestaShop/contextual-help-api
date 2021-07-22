@@ -14,6 +14,7 @@ use Help\PrestaShop\Http\HttpClient;
 use Help\PrestaShop\PageInfosBuilder;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Symfony\Component\Dotenv\Dotenv;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 
@@ -30,8 +31,12 @@ const STREAM_OPTIONS = [
 const TEMPLATES_PATH = __DIR__ . '/../views';
 const MAPPING_FILES_PATH = __DIR__ . '/../config/mappings';
 
+$dotenv = new Dotenv();
+$dotenv->loadEnv(__DIR__ . '/../.env');
+
 $templatesLoader = new FilesystemLoader(TEMPLATES_PATH);
 $twig = new Environment($templatesLoader);
+$twig->addGlobal('ga_account_key', $_ENV['GA_ACCOUNT_KEY']);
 
 $logger = new Logger('logs');
 $logger->pushHandler(new StreamHandler(LOG_FILE, Logger::WARNING));

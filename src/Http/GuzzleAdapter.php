@@ -18,9 +18,11 @@ use Psr\Http\Message\ResponseInterface;
 class GuzzleAdapter implements AdapterInterface
 {
     /**
+     * {@inheritDoc}
+     *
      * @throws GuzzleException
      */
-    public function get(string $url, ?array $options = []): ResponseInterface
+    public function get(string $url, array $options = []): ResponseInterface
     {
         return (new Client())->get($url, $options);
     }

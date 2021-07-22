@@ -22,9 +22,14 @@ class HttpClient
     }
 
     /**
+     * @param string $url
+     * @param array<string, array> $options
+     *
+     * @return string
+     *
      * @throws HttpRequestException
      */
-    public function get(string $url, ?array $options = []): string
+    public function get(string $url, array $options = []): string
     {
         try {
             $response = $this->adapter->get($url, $options);

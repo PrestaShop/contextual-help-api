@@ -14,5 +14,11 @@ use Psr\Http\Message\ResponseInterface;
 
 interface AdapterInterface
 {
-    public function get(string $url, ?array $options = []): ResponseInterface;
+    /**
+     * @param string $url
+     * @param array<string, array> $options
+     *
+     * @return ResponseInterface
+     */
+    public function get(string $url, array $options = []): ResponseInterface;
 }

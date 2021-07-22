@@ -136,3 +136,5 @@ jobs:
 
       -   name: Run behat
           run: ./vendor/bin/behat -c tests/Integration/behat.yml
+          env:
+            APP_ENV: test

@@ -19,14 +19,14 @@ class DocContentProvider implements ContentProviderInterface
     private string $urlPattern;
 
     /**
-     * @var array<string, array>|null
+     * @var array<string, array>
      */
-    private ?array $urlOptions;
+    private array $urlOptions = [];
 
     /**
      * @param array<string, array> $urlOptions
      */
-    public function __construct(private HttpClient $httpClient, string $urlPattern, ?array $urlOptions = [])
+    public function __construct(private HttpClient $httpClient, string $urlPattern, array $urlOptions = [])
     {
         $this->urlPattern = $urlPattern;
         $this->urlOptions = $urlOptions;
