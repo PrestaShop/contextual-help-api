@@ -1,8 +1,8 @@
 {
-  "name": "prestashop/help.prestashop.com",
+  "name": "prestashop/contextual-help-api",
   "type": "project",
   "description": "Contextual Help for PrestaShop",
-  "homepage": "https://github.com/PrestaShop/help.prestashop.com",
+  "homepage": "https://github.com/PrestaShop/contextual-help-api",
   "license": "proprietary",
   "require": {
     "php": ">=8.0.7",

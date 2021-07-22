@@ -1,7 +1,5 @@
-.htaccess
 !/public/.htaccess
 !/public/index.php
-/deploy/deploy_settings
 /vendor/*
 /.idea/*
 /var/.php_cs.cache
