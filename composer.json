@@ -1,15 +1,16 @@
 {
-  "name": "prestashop/help.prestashop.com",
+  "name": "prestashop/contextual-help-api",
   "type": "project",
   "description": "Contextual Help for PrestaShop",
-  "homepage": "https://github.com/PrestaShop/help.prestashop.com",
-  "license": "proprietary",
+  "homepage": "https://github.com/PrestaShop/contextual-help-api",
+  "license": "MIT",
   "require": {
     "php": ">=8.0.7",
     "ext-http": "*",
     "ezyang/htmlpurifier": "^4.13",
     "guzzlehttp/guzzle": "^7.3",
     "monolog/monolog": "^2.3",
+    "symfony/dotenv": "^5.3",
     "twig/twig": "^3.3"
   },
   "require-dev": {

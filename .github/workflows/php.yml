@@ -9,7 +9,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.0'
-          extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv
+          extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, http
       - uses: actions/checkout@v2
 
       - name: Get Composer Cache Directory
@@ -42,7 +42,7 @@ jobs:
             uses: shivammathur/setup-php@v2
             with:
                 php-version: '8.0'
-                extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml
+                extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml, http
         -   uses: actions/checkout@v2
 
         -   name: Get Composer Cache Directory
@@ -76,7 +76,7 @@ jobs:
             uses: shivammathur/setup-php@v2
             with:
                 php-version: ${{ matrix.php }}
-                extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml
+                extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml, http
 
         -   uses: actions/checkout@v2
 
@@ -111,7 +111,7 @@ jobs:
           uses: shivammathur/setup-php@v2
           with:
             php-version: ${{ matrix.php }}
-            extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml
+            extensions: mbstring, intl, gd, xml, dom, json, fileinfo, curl, zip, iconv, simplexml, http
 
       -   uses: actions/checkout@v2
 
@@ -136,3 +136,5 @@ jobs:
 
       -   name: Run behat
           run: ./vendor/bin/behat -c tests/Integration/behat.yml
+          env:
+            APP_ENV: test
