@@ -33,7 +33,7 @@ jobs:
       - name: Set up Cloud SDK ⚙️
         uses: google-github-actions/setup-gcloud@v0
         with:
-          project_id: ${{ env.GCLOUD_NAMESPACE_INTEGRATION }}
+          project_id: ${{ env.GCP_PROJECT }}
           service_account_key: ${{ secrets.INTEGRATION_GOOGLE_APPLICATION_CREDENTIALS }}
           export_default_credentials: true
 
