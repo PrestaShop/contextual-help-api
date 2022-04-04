@@ -1,1 +1,6 @@
 .git*
+Dockerile*
+docker-compose.yml
+README.md
+vhost.conf
+phpstan.neon
