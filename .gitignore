@@ -10,7 +10,7 @@
 
 ## Devops Stuff
 *gcp-token.json*
-*/.cloud/.terraform/terraform.tfstate
-*/.cloud/.terraform.lock.hcl
-*/.cloud/terraform.tfstate.d
-*/.cloud/.terraform
+.cloud/.terraform/terraform.tfstate
+.cloud/.terraform.lock.hcl
+.cloud/terraform.tfstate.d
+.cloud/.terraform
