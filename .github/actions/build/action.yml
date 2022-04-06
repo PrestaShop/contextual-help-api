@@ -46,9 +46,9 @@ runs:
         gcloud auth configure-docker ${GCLOUD_REGISTRY}
         docker build \
           --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:latest" \
-          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:${TAG}" .
-        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:${TAG}"
-        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:latest"
+          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:${TAG}" .
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:${TAG}"
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:latest"
       env:
         GCLOUD_REGISTRY: ${{ inputs.gcp-registry }}
         GCLOUD_PROJECT: ${{ inputs.gcp-project }}
