@@ -48,7 +48,7 @@ jobs:
 #      - name: Deploying API 🚚
 #        uses: ./.github/actions/deploy
 #        with:
-#          workspace: ${{ steps.get_bulle.outputs.BULLE }}
+#          workspace: "integration"
 #          cloud-path: ${{ env.APP_CLOUD_PATH }}
 #          gcp-credentials: ${{ secrets.INTEGRATION_GOOGLE_APPLICATION_CREDENTIALS }}
 #          gcp-project: ${{ env.GCLOUD_NAMESPACE_INTEGRATION }}
