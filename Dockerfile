@@ -3,11 +3,9 @@ FROM composer:2 as builder
 WORKDIR /app
 COPY . .
 RUN rm vhost.conf
-RUN composer update
-RUN composer install --no-dev
-#RUN composer install
+RUN composer update && \
+    composer install --no-dev
 
-# Dockerfile.development
 FROM php:8.0-apache
 
 # Setup Apache2 config
