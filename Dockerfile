@@ -5,7 +5,7 @@ COPY . .
 RUN rm vhost.conf
 RUN composer update
 RUN composer install --no-dev
-RUN ls -altrh
+#RUN composer install
 
 # Dockerfile.development
 FROM php:8.0-apache
