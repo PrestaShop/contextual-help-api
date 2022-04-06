@@ -20,7 +20,7 @@ inputs:
   gcp-registry:
     required: false
     description: "GCP registry name"
-    default: "eu.gcr.io"
+    default: "europe-west1-docker.pkg.dev"
   gcp-credentials:
     required: true
     description: "GCP services contextual help api credentials"
@@ -43,12 +43,12 @@ runs:
       shell: bash
       working-directory: ${{ inputs.app-path }}
       run: |
-        gcloud auth configure-docker 
+        gcloud auth configure-docker ${GCLOUD_REGISTRY}
         docker build \
-          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}:latest" \
-          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}:${TAG}" .
-        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}:${TAG}"
-        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}:latest"
+          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:latest" \
+          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:${TAG}" .
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:${TAG}"
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}/:latest"
       env:
         GCLOUD_REGISTRY: ${{ inputs.gcp-registry }}
         GCLOUD_PROJECT: ${{ inputs.gcp-project }}
