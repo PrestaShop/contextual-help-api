@@ -19,7 +19,7 @@ jobs:
     env:
       APP_PATH: '.'
       APP_CLOUD_PATH: '.cloud/'
-      APP_NAME: 'help-api'
+      APP_NAME: 'contextual-help-api'
 
     steps:
       - name: Setting up terraform for later 🌎
