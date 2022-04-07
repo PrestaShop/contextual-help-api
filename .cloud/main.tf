@@ -10,7 +10,7 @@ resource "google_cloud_run_service" "contextual_help_api" {
   template {
     spec {
       containers {
-        image = "europe-west1-docker.pkg.dev/core-oss-integration/contextual-help-api/contextual-help-api:${var.app_version}"
+        image = "europe-west1-docker.pkg.dev/${local.gcp_project}/contextual-help-api/contextual-help-api:${var.app_version}"
         ports {
           name           = "http1"
           protocol       = "TCP"
