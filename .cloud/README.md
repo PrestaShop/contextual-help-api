@@ -10,10 +10,9 @@
 
 ## Inputs variables
 
-You can modify inputs variable here [here](variables.tf)
-* stage used to determine application stage target (alpha/stable)
-* app_version is used to pull correct docker image
-* hash_id is used to force reapply deployment that has already been deployed
+The infrastructure variables can be found [here](variables.tf)
+* app_version is used to pull the correctly tagged docker image which runs the application
+* hash_id is used to document and trigger a new revision
 
 ### Environment variables
 
@@ -27,7 +26,19 @@ All those are direclty injected to the Cloud Run runtime through GCP Secrets.
 * [production app key variable SOON]()
 * [production google analytics key variable SOON]()
 
-## CI/CD
+## Application build
+
+The application is built through docker with the CI/CD actions.
+
+In order to get the cleanest run image possible, we are using the multi-stage feature.
+
+This allows to install the application's build tools in a first docker image and push those assets in the run image - but without the build tools.
+
+![alt text](pics/mutlistage.png "Docker Multi-Stage")
+
+## CI/CD Workflow
+
+As seen above, we are using the Github flow for our CI/CD.
 
 Github action automatically deploy this configuration.
 * [Integration](../.github/workflows/contextual-help-api-cd-integration.yml )
