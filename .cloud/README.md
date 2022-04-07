@@ -34,7 +34,7 @@ In order to get the cleanest run image possible, we are using the multi-stage fe
 
 This allows to install the application's build tools in a first docker image and push those assets in the run image - but without the build tools.
 
-![alt text](pics/mutlistage.png "Docker Multi-Stage")
+![alt text](pics/multistage.png "Docker Multi-Stage")
 
 ## CI/CD Workflow
 
