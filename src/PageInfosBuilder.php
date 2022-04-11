@@ -39,7 +39,7 @@ class PageInfosBuilder
      *
      * @throws Exception
      */
-    public function getPageInfosFromUri(string $uri, string | null $version): PageInfos
+    public function getPageInfosFromUri(string $uri, string|null $version): PageInfos
     {
         try {
             $urlComponents = parse_url($uri);
@@ -85,7 +85,7 @@ class PageInfosBuilder
      *
      * @return string
      */
-    private function getVersion(string | null $version): string
+    private function getVersion(string|null $version): string
     {
         if (null === $version) {
             return self::FALLBACK_VERSION;
