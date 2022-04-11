@@ -7,7 +7,7 @@ locals {
       integration = "core-oss-integration" 
       preprod     = "core-oss-preprod"
       production  = "core-oss-production"
-      }
+    }
     mapped_domain = {
       integration = "integration-help.prestashop-project.org"
       preprod     = "preprod-help.prestashop-project.org"
