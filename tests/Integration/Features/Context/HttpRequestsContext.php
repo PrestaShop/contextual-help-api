@@ -16,7 +16,7 @@ use Help\PrestaShop\Http\HttpClient;
 
 class HttpRequestsContext implements Context
 {
-    private string | false $lastResult;
+    private string|false $lastResult;
 
     private const BASE_URL = 'http://localhost:8008';
 

@@ -1,0 +1,10 @@
+.git*
+Dockerfile*
+.dockerignore
+docker-compose.yml
+README.md
+phpstan.neon
+
+# Ops stuff
+*gcp-token.json*
+.cloud/

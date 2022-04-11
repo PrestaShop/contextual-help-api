@@ -1,0 +1,57 @@
+name: 'Build application'
+description: 'Build project and push to gcp registry'
+inputs:
+  gcp-project:
+    description: "Project id (used for gcp)"
+    required: true
+  app-path:
+    required: true
+    description: "Application path"
+  app-name:
+    required: true
+    description: "Name of the app, used to name the image"
+  cloud-path:
+    required: true
+    description: "Cloud application path"
+  prefix-tag:
+    required: false
+    description: "Prefixed used in alpha for the tag image"
+    default: ""
+  gcp-registry:
+    required: false
+    description: "GCP registry name"
+    default: "europe-west1-docker.pkg.dev"
+  gcp-credentials:
+    required: true
+    description: "GCP services contextual help api credentials"
+  environment:
+    required: false
+    description: "Application environment (integration / production)"
+    default: "production"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Get tag
+      shell: bash
+      id: get_tag
+      run: echo ::set-output name=TAG::$PREFIX_TAG$(echo $GITHUB_REF | cut -d / -f 3)
+      env:
+        PREFIX_TAG: ${{ inputs.prefix-tag }}
+
+    - name: Build and push final image for Contextual Help API
+      shell: bash
+      working-directory: ${{ inputs.app-path }}
+      run: |
+        gcloud auth configure-docker ${GCLOUD_REGISTRY}
+        docker build \
+          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:latest" \
+          --tag="${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:${TAG}" .
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:${TAG}"
+        docker push "${GCLOUD_REGISTRY}/${GCLOUD_PROJECT}/${APP_NAME}/${APP_NAME}:latest"
+      env:
+        GCLOUD_REGISTRY: ${{ inputs.gcp-registry }}
+        GCLOUD_PROJECT: ${{ inputs.gcp-project }}
+        APP_NAME: ${{inputs.app-name }}
+        TAG: ${{ steps.get_tag.outputs.TAG }}
+        ENVIRONMENT: ${{ inputs.environment }}

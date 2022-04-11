@@ -34,7 +34,7 @@ class ContentBuilder
      * @throws RuntimeError
      * @throws LoaderError
      */
-    public function getContent(string $uri, string | null $version): string
+    public function getContent(string $uri, string|null $version): string
     {
         try {
             $pageInfos = $this->pageInfosBuilder->getPageInfosFromUri($uri, $version);

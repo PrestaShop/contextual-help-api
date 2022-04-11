@@ -6,7 +6,6 @@
   "license": "MIT",
   "require": {
     "php": ">=8.0.7",
-    "ext-http": "*",
     "ezyang/htmlpurifier": "^4.13",
     "guzzlehttp/guzzle": "^7.3",
     "monolog/monolog": "^2.3",

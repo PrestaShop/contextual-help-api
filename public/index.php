@@ -20,7 +20,7 @@ use Twig\Loader\FilesystemLoader;
 
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
 
-//const LOG_FILE = __DIR__ . '/../var/logs/dev.log';
+// const LOG_FILE = __DIR__ . '/../var/logs/dev.log';
 const LOG_FILE = 'php://stdout';
 const STREAM_URL_PATTERN = 'http://doc.prestashop.com/rest/api/content/PAGE_ID?expand=body.view';
 const STREAM_OPTIONS = [
