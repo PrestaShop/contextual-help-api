@@ -5,7 +5,7 @@ locals {
   config = {
     gcp_project = {
       integration = "core-oss-integration" 
-      preprod     = "core-oss-preprod"
+      preprod     = "core-oss-preproduction"
       production  = "core-oss-production"
     }
     mapped_domain = {
