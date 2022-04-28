@@ -49,7 +49,7 @@ jobs:
       - name: Deploying Contextual Help API Image 🚚
         uses: ./.github/actions/deploy
         with:
-          workspace: "integration"
+          workspace: "preprod"
           cloud-path: ${{ env.APP_CLOUD_PATH }}
           gcp-credentials: ${{ secrets.PREPRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
           gcp-project: ${{ env.GCP_PROJECT }}
