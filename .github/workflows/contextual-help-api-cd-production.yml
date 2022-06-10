@@ -1,5 +1,8 @@
 name: CONTEXTUAL HELP API PRODUCTION CD
 
+concurrency:
+  group: production
+
 on:
   push:
     branches:

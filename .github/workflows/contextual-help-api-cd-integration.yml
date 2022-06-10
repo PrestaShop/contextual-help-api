@@ -1,5 +1,8 @@
 name: CONTEXTUAL HELP API INTEGRATION CD
 
+concurrency:
+  group: integration
+
 on:
   pull_request:
     types: [opened,edited,reopened,synchronize,labeled]
