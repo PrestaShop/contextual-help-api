@@ -13,7 +13,7 @@ env:
   TF_VERSION: '0.14.7'
 
 jobs:
-  contextual_help_api_integration:
+  contextual_help_api_production:
     name: Contextual Help API Production CD
     runs-on: ubuntu-latest
     timeout-minutes: 15

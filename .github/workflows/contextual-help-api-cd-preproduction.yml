@@ -14,7 +14,7 @@ env:
   LABELS: ${{toJSON(github.event.pull_request.labels)}}
 
 jobs:
-  contextual_help_api_integration:
+  contextual_help_api_preprod:
     name: Contextual Help API Preproduction CD
     runs-on: ubuntu-latest
     timeout-minutes: 15
