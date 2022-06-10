@@ -47,10 +47,10 @@ jobs:
           gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
           gcp-project: ${{ env.GCP_PROJECT }}
 
-#      - name: Deploying Contextual Help API Image 🚚
-#        uses: ./.github/actions/deploy
-#        with:
-#          workspace: "production"
-#          cloud-path: ${{ env.APP_CLOUD_PATH }}
-#          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
-#          gcp-project: ${{ env.GCP_PROJECT }}
+      - name: Deploying Contextual Help API Image 🚚
+        uses: ./.github/actions/deploy
+        with:
+          workspace: "production"
+          cloud-path: ${{ env.APP_CLOUD_PATH }}
+          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
+          gcp-project: ${{ env.GCP_PROJECT }}
