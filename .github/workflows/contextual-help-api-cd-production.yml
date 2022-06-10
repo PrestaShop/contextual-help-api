@@ -1,0 +1,53 @@
+name: CONTEXTUAL HELP API PRODUCTION CD
+
+on:
+  push:
+    branches:
+      - launchingProduction
+
+env:
+  GCP_PROJECT: 'core-oss-production'
+  TF_VERSION: '0.14.7'
+
+jobs:
+  contextual_help_api_integration:
+    name: Contextual Help API Production CD
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      APP_PATH: '.'
+      APP_CLOUD_PATH: '.cloud/'
+      APP_NAME: 'contextual-help-api'
+
+    steps:
+      - name: Setting up terraform for later 🌎
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Checkout the repository 🎁
+        uses: actions/checkout@v1
+
+      - name: Set up Cloud SDK ⚙️
+        uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: ${{ env.GCP_PROJECT }}
+          service_account_key: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
+          export_default_credentials: true
+
+      - name: Building Contextual Help API Image 👷
+        uses: ./.github/actions/build
+        with:
+          app-path: ${{ env.APP_PATH }}
+          app-name: ${{ env.APP_NAME }}
+          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
+          gcp-project: ${{ env.GCP_PROJECT }}
+
+#      - name: Deploying Contextual Help API Image 🚚
+#        uses: ./.github/actions/deploy
+#        with:
+#          workspace: "production"
+#          cloud-path: ${{ env.APP_CLOUD_PATH }}
+#          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
+#          gcp-project: ${{ env.GCP_PROJECT }}
