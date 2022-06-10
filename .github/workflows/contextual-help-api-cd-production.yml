@@ -4,9 +4,8 @@ concurrency:
   group: production
 
 on:
-  push:
-    branches:
-      - launchingProduction
+  release:
+    types: [released]
 
 env:
   GCP_PROJECT: 'core-oss-production'
