@@ -23,8 +23,8 @@ All those are direclty injected to the Cloud Run runtime through GCP Secrets.
 * [integration google analytics key variable](https://console.cloud.google.com/security/secret-manager/secret/contextual-help-api-google-analytics/versions?cloudshell=false&project=core-oss-integration)
 * [preprod app key variable](https://console.cloud.google.com/security/secret-manager/secret/contextual-help-api-key?cloudshell=false&project=core-oss-preproduction)
 * [preprod google analytics key variable](https://console.cloud.google.com/security/secret-manager/secret/contextual-help-api-google-analytics/versions?cloudshell=false&project=core-oss-preproduction)
-* [production app key variable SOON]()
-* [production google analytics key variable SOON]()
+* [production app key variable](https://console.cloud.google.com/security/secret-manager/secret/contextual-help-api-key/versions?cloudshell=false&project=core-oss-production)
+* [production google analytics key variable](https://console.cloud.google.com/security/secret-manager/secret/contextual-help-api-google-analytics/versions?cloudshell=false&project=core-oss-production)
 
 ## Application build
 
@@ -49,11 +49,11 @@ Github action automatically deploy this configuration.
 * [Preprod](../.github/workflows/contextual-help-api-cd-preprod.yml )
 > Push on the master branch will trigger a build and a deployment on the preprod environment
 
-* [Production SOON](../.github/workflows/contextual-help-api-cd-production.yml)
+* [Production](../.github/workflows/contextual-help-api-cd-production.yml)
 > A release will automatically trigger the current tag to be deployed on the production environment.
 
 ## Application urls
 
 * [Contextual Help API Integration](https://integration-help.prestashop-project.org/en/doc/AdminDashboard?version=1.7.8.0)
 * [Contextual Help API Preprod](https://preprod-help.prestashop-project.org/en/doc/AdminDashboard?version=1.7.8.0)
-* [Contextual Help API Production SOON](https://help.prestashop-project.org/en/doc/AdminDashboard?version=1.7.8.0)
+* [Contextual Help API Production](https://help.prestashop-project.org/en/doc/AdminDashboard?version=1.7.8.0)

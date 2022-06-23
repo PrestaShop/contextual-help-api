@@ -1,23 +1,21 @@
-name: CONTEXTUAL HELP API INTEGRATION CD
+name: CONTEXTUAL HELP API PRODUCTION CD
 
 concurrency:
-  group: integration
+  group: production
 
 on:
-  pull_request:
-    types: [opened,edited,reopened,synchronize,labeled]
+  release:
+    types: [released]
 
 env:
-  GCP_PROJECT: 'core-oss-integration'
+  GCP_PROJECT: 'core-oss-production'
   TF_VERSION: '0.14.7'
-  LABELS: ${{toJSON(github.event.pull_request.labels)}}
 
 jobs:
-  contextual_help_api_integration:
-    name: Contextual Help API Integration CD
+  contextual_help_api_production:
+    name: Contextual Help API Production CD
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: contains(github.event.pull_request.labels.*.name, 'integration-deployment')
 
     env:
       APP_PATH: '.'
@@ -37,7 +35,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
         with:
           project_id: ${{ env.GCP_PROJECT }}
-          service_account_key: ${{ secrets.INTEGRATION_GOOGLE_APPLICATION_CREDENTIALS }}
+          service_account_key: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
           export_default_credentials: true
 
       - name: Building Contextual Help API Image 👷
@@ -45,13 +43,13 @@ jobs:
         with:
           app-path: ${{ env.APP_PATH }}
           app-name: ${{ env.APP_NAME }}
-          gcp-credentials: ${{ secrets.INTEGRATION_GOOGLE_APPLICATION_CREDENTIALS }}
+          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
           gcp-project: ${{ env.GCP_PROJECT }}
 
       - name: Deploying Contextual Help API Image 🚚
         uses: ./.github/actions/deploy
         with:
-          workspace: "integration"
+          workspace: "production"
           cloud-path: ${{ env.APP_CLOUD_PATH }}
-          gcp-credentials: ${{ secrets.INTEGRATION_GOOGLE_APPLICATION_CREDENTIALS }}
+          gcp-credentials: ${{ secrets.PRODUCTION_GOOGLE_APPLICATION_CREDENTIALS }}
           gcp-project: ${{ env.GCP_PROJECT }}
