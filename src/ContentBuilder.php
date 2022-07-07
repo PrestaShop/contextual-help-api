@@ -11,8 +11,6 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop;
 
-use HTMLPurifier;
-use HTMLPurifier_Config;
 use Monolog\Logger;
 use Twig\Environment;
 use Twig\Error\LoaderError;
@@ -23,6 +21,7 @@ class ContentBuilder
 {
     public function __construct(
         private ContentProviderInterface $docContentProvider,
+        private ContentBuilderBodyProvider $contentBuilderBodyProvider,
         private PageInfosBuilder $pageInfosBuilder,
         private Environment $twig,
         private Logger $logger
@@ -34,7 +33,7 @@ class ContentBuilder
      * @throws RuntimeError
      * @throws LoaderError
      */
-    public function getContent(string $uri, string|null $version): string
+    public function getContent(string $uri, ?string $version): string
     {
         try {
             $pageInfos = $this->pageInfosBuilder->getPageInfosFromUri($uri, $version);
@@ -45,38 +44,13 @@ class ContentBuilder
                 throw new \Exception('Cannot retrieve doc content');
             }
 
-            $body = $this->buildBody(json_decode($streamContent));
+            $bodyBuilder = $this->contentBuilderBodyProvider->getContentBuilderBody($pageInfos);
         } catch (\Exception $exception) {
             $this->logger->error($exception->getMessage(), ['exception' => $exception]);
 
             return $this->twig->render('error.html.twig');
         }
 
-        return $this->twig->render('index.html.twig', [
-            'body' => $body,
-            'pageInfos' => $pageInfos,
-        ]);
-    }
-
-    /**
-     * @param mixed $content
-     */
-    private function buildBody(mixed $content): string
-    {
-        $content = (string) $content->body->view->value;
-
-        // Clean the html content
-        $content = str_replace("\n", '', $content);
-        $content = preg_replace('@<ac:macro\s+ac:name=\"(\w+)\">@', '<div class="$1">', $content);
-        $content = preg_replace('@</ac:macro>@', '</div>', (string) $content);
-        $content = preg_replace_callback('/<!\[CDATA\[(.*)\]\]>/U', function ($matches) {
-            return htmlspecialchars($matches[1]);
-        }, (string) $content);
-        $content = strip_tags((string) $content, '<ul><ol><li><div><p><h1><h2><h3><strong>');
-        $config = HTMLPurifier_Config::createDefault();
-        $config->set('Attr.EnableID', true);
-        $purifier = new HTMLPurifier($config);
-
-        return $purifier->purify($content);
+        return $bodyBuilder->render($pageInfos, json_decode($streamContent));
     }
 }

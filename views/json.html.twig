@@ -1,0 +1,89 @@
+<nav id="main-nav" class="main-nav"></nav>
+<div class="page-wrap">
+    <header class="main-header bar bar-nav">
+        <a href="#" class="icon-bar fa fa-arrow-left close-menu pull-left"></a>
+        <a href="#" class="icon-bar fa fa-th-list open-menu pull-left"></a>
+        <a href="#" class="home icon-bar fa fa-home pull-left"></a>
+        <a href="#" class="icon-bar fa fa-external-link-square popup pull-left"></a>
+        <div id="search-box">
+            <form class="pull-right" action="" method="POST">
+                <input name="search" type="text" class="form-control" placeholder="Search...">
+                <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+    <div id="search-results" class="hide"></div>
+    <div class="content">
+        <section class="article">
+            {{ body|raw }}
+        </section>
+        <section class="feedback">
+            <h4>{{ title }}</h4>
+            <p class="thanks hide">{{ thanks }}</p>
+            <div class="feedback-container">
+                <form id="helpful-feedback" class="form-horizontal">
+                    <div class="form-group">
+                        <div class="helpful-input-range">
+                            <ul class="helpful-labels">
+                                <li data-percentage="0">{{ not_at_all_helpful|raw }}</li>
+                                <li data-percentage="25">{{ not_very_helpful|raw }}</li>
+                                <li data-percentage="50">{{ somewhat_helpful|raw }}</li>
+                                <li data-percentage="75">{{ very_helpful|raw }}</li>
+                                <li data-percentage="100">{{ extremely_helpful|raw }}</li>
+                            </ul>
+                            <input type="hidden" name="helpful-note">
+                            <div class="slider">
+                                <div class="slider-cursor hide"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback-reason">
+                        <button type="button" class="close feedback-submit" href="#">X</button>
+                        <div class="form-group">
+                            <div class="col-sm-11 col-sm-push-1">
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="1">{{ feedback_reason_1 }}</label>
+                                </p>
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="2">{{ feedback_reason_2 }}</label>
+                                </p>
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="3">{{ feedback_reason_3 }}</label>
+                                </p>
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="4">{{ feedback_reason_4 }}</label>
+                                </p>
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="5">{{ feedback_reason_5 }}</label>
+                                </p>
+                                <p class="radio"><label><input name="lowrating-reason" type="radio" value="6">{{ feedback_reason_6 }}</label>
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <label for="">Do you have any other feedback about this help content?</label>
+                                <textarea class="form-control" name="feedback-detail" id="" cols="30"
+                                          rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <button type="button" class="feedback-submit btn btn-primary pull-right">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="suggested">
+            <header>
+                <h4>{{ useful_links }}</h4>
+            </header>
+            <div class="list-group">
+                <a class="list-group-item push-right" href="http://www.prestashop.com/forums/" target="_blank">
+                    <strong>{{ prestaShop_Forum }}</strong>
+                </a>
+                <a class="list-group-item push-right" href="http://doc.prestashop.com/" target="_blank">
+                    <strong>{{ full_doc }}</strong>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>

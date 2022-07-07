@@ -39,41 +39,46 @@ class PageInfosBuilder
      *
      * @throws Exception
      */
-    public function getPageInfosFromUri(string $uri, string|null $version): PageInfos
+    public function getPageInfosFromUri(string $uri, ?string $version): PageInfos
     {
         try {
-            $urlComponents = parse_url($uri);
-            if (!is_array($urlComponents) || !isset($urlComponents['path'])) {
-                throw new Exception('Invalid URL');
-            }
-            $pathElements = explode('/', trim($urlComponents['path'], '/'));
-
-            if (count($pathElements) < 3) {
-                throw new Exception('Invalid URL' . $uri);
-            }
-
-            $language = $pathElements[0];
-            $controller = $pathElements[2];
-
-            $version = $this->getVersion($version);
-
-            $mapping = include $this->getMappingFilename($version);
-
-            if (!isset($mapping[$controller])) {
-                $controller = self::FALLBACK_CONTROLLER;
-            }
-            if (!isset($mapping[$controller][$language])) {
-                $language = self::FALLBACK_LANGUAGE;
-            }
+            $parsedUri = new ParsedUri($uri);
         } catch (Exception $exception) {
             $this->logger->error($exception->getMessage(), ['exception' => $exception]);
             throw new Exception('Cannot load page infos');
         }
 
+        if ($parsedUri->isApiRequest()) {
+            $request = $parsedUri->getRequest();
+            $language = $request['language'] ?? self::FALLBACK_LANGUAGE;
+            $controller = $request['getHelp'] ?? null;
+            $version = $request['version'] ?? null;
+            $callback = $parsedUri->getQuery()['callback'] ?? null;
+            $pageType = PageInfos::PAGE_TYPE_JSON;
+        } else {
+            $pathElements = $parsedUri->getPathElements();
+            $language = $pathElements[0];
+            $controller = $pathElements[2];
+            $callback = null;
+            $pageType = PageInfos::PAGE_TYPE_HTML;
+        }
+
+        $version = $this->getVersion($version);
+        $mapping = include_once $this->getMappingFilename($version);
+
+        if (!isset($mapping[$controller])) {
+            $controller = self::FALLBACK_CONTROLLER;
+        }
+        if (!isset($mapping[$controller][$language])) {
+            $language = self::FALLBACK_LANGUAGE;
+        }
+
         return new PageInfos(
             (int) $mapping[$controller][$language],
             $controller,
-            $language
+            $language,
+            $pageType,
+            $callback
         );
     }
 
@@ -85,7 +90,7 @@ class PageInfosBuilder
      *
      * @return string
      */
-    private function getVersion(string|null $version): string
+    private function getVersion(?string $version): string
     {
         if (null === $version) {
             return self::FALLBACK_VERSION;

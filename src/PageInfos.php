@@ -13,10 +13,15 @@ namespace Help\PrestaShop;
 
 class PageInfos
 {
+    public const PAGE_TYPE_HTML = 'html';
+    public const PAGE_TYPE_JSON = 'json';
+
     public function __construct(
         private int $pageId,
         private string $controller,
-        private string $language
+        private string $language,
+        private string $pageType = self::PAGE_TYPE_HTML,
+        private ?string $callback = null
     ) {
     }
 
@@ -33,5 +38,15 @@ class PageInfos
     public function getLanguage(): string
     {
         return $this->language;
+    }
+
+    public function getPageType(): string
+    {
+        return $this->pageType;
+    }
+
+    public function getCallback(): ?string
+    {
+        return $this->callback;
     }
 }

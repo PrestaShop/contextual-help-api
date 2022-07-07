@@ -8,6 +8,7 @@
  * file that was distributed with this source code.
  */
 use Help\PrestaShop\ContentBuilder;
+use Help\PrestaShop\ContentBuilderBodyProvider;
 use Help\PrestaShop\DocContentProvider;
 use Help\PrestaShop\Http\GuzzleAdapter;
 use Help\PrestaShop\Http\HttpClient;
@@ -30,6 +31,7 @@ const STREAM_OPTIONS = [
 ];
 const TEMPLATES_PATH = __DIR__ . '/../views';
 const MAPPING_FILES_PATH = __DIR__ . '/../config/mappings';
+const TRANSLATIONS_FILE = __DIR__ . '/../config/translations.php';
 
 $dotenv = new Dotenv();
 $dotenv->loadEnv(__DIR__ . '/../.env');
@@ -47,7 +49,8 @@ $httpAdapter = new GuzzleAdapter();
 $httpClient = new HttpClient($httpAdapter);
 
 $docContentProvider = new DocContentProvider($httpClient, STREAM_URL_PATTERN, STREAM_OPTIONS);
+$contentBuilderBodyProvider = new ContentBuilderBodyProvider($twig, TRANSLATIONS_FILE);
 
-$contentBuilder = new ContentBuilder($docContentProvider, $pageInfosBuilder, $twig, $logger);
+$contentBuilder = new ContentBuilder($docContentProvider, $contentBuilderBodyProvider, $pageInfosBuilder, $twig, $logger);
 
 echo $contentBuilder->getContent($_SERVER['REQUEST_URI'], $_GET['version'] ?? null);
