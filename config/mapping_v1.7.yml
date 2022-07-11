@@ -1,0 +1,515 @@
+GettingStarted:
+  en: 'user-guide/README.md'
+  fr: 'guide-utilisateur/README.md'
+  es: 'guia-usuario/README.md'
+  it: 'guida-utente/README.md'
+
+AdminLogin:
+  en: 'user-guide/connecting-back-office.md'
+  fr: 'guide-utilisateur/connexion-back-office.md'
+  es: 'guia-usuario/conexion-back-office.md'
+  it: 'guida-utente/connettersi-al-back-office.md'
+
+AdminDashboard:
+  en: 'user-guide/discovering-administration-area.md'
+  fr: 'guide-utilisateur/decouvrir-zone-administration.md'
+  es: 'guia-usuario/descubrir-area-administracion.md'
+  it: 'guida-utente/scoprire-area-amministrazione.md'
+
+AdminDashgoals:
+  en: 'user-guide/discovering-administration-area.md'
+  fr: 'guide-utilisateur/decouvrir-zone-administration.md'
+  es: 'guia-usuario/descubrir-area-administracion.md'
+  it: 'guida-utente/scoprire-area-amministrazione.md'
+
+AdminCategories:
+  en: 'user-guide/selling/managing-catalog/managing-categories.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-categories.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-categorias.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-categorie.md'
+
+AdminAttributeGenerator:
+  en: 'user-guide/selling/managing-catalog/managing-products.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-produits.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-productos.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-prodotti.md'
+
+product/catalog:
+  en: 'user-guide/selling/managing-catalog/README.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/README.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/README.md'
+  it: 'guida-utente/vendere/gestire-catalogo/README.md'
+
+AdminProducts:
+  en: 'user-guide/selling/managing-catalog/README.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/README.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/README.md'
+  it: 'guida-utente/vendere/gestire-catalogo/README.md'
+
+product/form:
+  en: 'user-guide/selling/managing-catalog/managing-products.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-produits.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-productos.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-prodotti.md'
+
+AdminTracking:
+  en: 'user-guide/selling/managing-catalog/monitoring-catalog.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/faire-le-suivi-de-votre-catalogue.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/monitorear-catalogo.md'
+  it: 'guida-utente/vendere/gestire-catalogo/monitorare-catalogo.md'
+
+AdminAttributesGroups:
+  en: 'user-guide/selling/managing-catalog/managing-product-attributes.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-attributs-produits.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-atributos-producto.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-attributi-prodotti.md'
+
+AdminFeatures:
+  en: 'user-guide/selling/managing-catalog/managing-product-features.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-caracteristiques-produits.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-caracteristicas-producto.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-funzioni-prodotto.md'
+
+AdminManufacturers:
+  en: 'user-guide/selling/managing-catalog/managing-brands.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-marques.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-marcas.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-marchi.md'
+
+AdminSuppliers:
+  en: 'user-guide/selling/managing-catalog/managing-suppliers.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-fournisseurs.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-proveedores.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-fornitori.md'
+
+AdminTags:
+  en: 'user-guide/configuring-shop/shop-parameters/search/tags.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/recherche/mots-cles.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/busqueda/etiquetas.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/ricerca/tag.md'
+
+AdminAttachments:
+  en: 'user-guide/selling/managing-catalog/managing-files.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-fichiers.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-archivos.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-files.md'
+
+AdminOrders:
+  en: 'user-guide/selling/managing-orders/order-list-management.md'
+  fr: 'guide-utilisateur/vendre/gerer-commandes/gestion-liste-commandes.md'
+  es: 'guia-usuario/vender/gestionar-pedidos/pedidos.md'
+  it: 'guida-utente/vendere/gestire-ordini/ordini.md'
+
+AdminInvoices:
+  en: 'user-guide/selling/managing-orders/invoices.md'
+  fr: 'guide-utilisateur/vendre/gerer-commandes/factures.md'
+  es: 'guia-usuario/vender/gestionar-pedidos/facturas.md'
+  it: 'guida-utente/vendere/gestire-ordini/fatture.md'
+
+AdminReturn:
+  en: 'user-guide/selling/managing-customer-service/merchandise-returns.md'
+  fr: 'guide-utilisateur/vendre/gerer-service-client/retours-produits.md'
+  es: 'guia-usuario/vender/gestionar-servicio-atencion-cliente/devoluciones-de-mercancia.md'
+  it: 'guida-utente/vendere/gestire-servizio-clienti/resi-merce.md'
+
+AdminDeliverySlip:
+  en: 'user-guide/selling/managing-orders/delivery-slips.md'
+  fr: 'guide-utilisateur/vendre/gerer-commandes/bons-de-livraison.md'
+  es: 'guia-usuario/vender/gestionar-pedidos/albaranes-de-entrega.md'
+  it: 'guida-utente/vendere/gestire-ordini/bolle-di-accompagnamento.md'
+
+AdminSlip:
+  en: 'user-guide/selling/managing-orders/credit-slips.md'
+  fr: 'guide-utilisateur/vendre/gerer-commandes/avoirs.md'
+  es: 'guia-usuario/vender/gestionar-pedidos/facturas-por-abono.md'
+  it: 'guida-utente/vendere/gestire-ordini/note-di-credito.md'
+
+AdminStatuses:
+  en: 'user-guide/configuring-shop/shop-parameters/order-settings/statuses.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/commandes/etats-commandes.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/pedidos/estados.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-ordine/stati.md'
+
+AdminOrderMessage:
+  en: 'user-guide/selling/managing-customer-service/order-messages.md'
+  fr: 'guide-utilisateur/vendre/gerer-service-client/messages-predefinis.md'
+  es: 'guia-usuario/vender/gestionar-servicio-atencion-cliente/mensajes-predefinidos.md'
+  it: 'uida-utente/vendere/gestire-servizio-clienti/messaggi-dordine.md'
+
+AdminOutstanding:
+  en: 'user-guide/selling/managing-customers/outstanding.md'
+  fr: 'guide-utilisateur/vendre/gerer-clients/encours-autorises.md'
+  es: 'guia-usuario/vender/gestionar-clientes/b2b-saldo-pendiente-por-cobrar.md'
+  it: 'guida-utente/vendere/gestire-clienti/in-sospeso.md'
+
+AdminCustomers:
+  en: 'user-guide/selling/managing-customers/your-customers.md'
+  fr: 'guide-utilisateur/vendre/gerer-clients/vos-clients.md'
+  es: 'guia-usuario/vender/gestionar-clientes/tus-clientes.md'
+  it: 'uida-utente/vendere/gestire-clienti/i-tuoi-clienti.md'
+
+AdminAddresses:
+  en: 'user-guide/selling/managing-customers/customer-addresses.md'
+  fr: 'guide-utilisateur/vendre/gerer-clients/adresses-clients.md'
+  es: 'guia-usuario/vender/gestionar-clientes/direcciones-clientes.md'
+  it: 'guida-utente/vendere/gestire-clienti/indirizzi-clienti.md'
+
+AdminGroups:
+  en: 'user-guide/configuring-shop/shop-parameters/customer-settings/groups.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/parametres-clients/groupes-clients.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/configurar-clientes/grupos.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-clienti/gruppi.md'
+
+AdminCarts:
+  en: 'user-guide/selling/managing-orders/shopping-carts.md'
+  fr: 'guide-utilisateur/vendre/gerer-commandes/paniers.md'
+  es: 'guia-usuario/vender/gestionar-pedidos/carritos-de-compra.md'
+  it: 'guida-utente/vendere/gestire-ordini/carrelli-della-spesa.md'
+
+AdminCustomerThreads:
+  en: 'user-guide/selling/managing-customer-service/customer-service.md'
+  fr: 'guide-utilisateur/vendre/gerer-service-client/service-client.md'
+  es: 'guia-usuario/vender/gestionar-servicio-atencion-cliente/servicio-atencion-cliente.md'
+  it: 'guida-utente/vendere/gestire-servizio-clienti/servizio-clienti.md'
+
+AdminContacts:
+  en: 'user-guide/configuring-shop/shop-parameters/contact.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/gestion-contacts.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/contactos.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/contatto.md'
+
+AdminGenders:
+  en: 'user-guide/configuring-shop/shop-parameters/customer-settings/titles.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/parametres-clients/titres-de-civilite.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/configurar-clientes/titulos-sociales.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-clienti/titoli.md'
+
+AdminCartRules:
+  en: 'user-guide/selling/managing-catalog/managing-discounts/cart-rules.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/mettre-en-place-promotions/regles-paniers.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-descuentos/reglas-carrito.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-sconti/regole-carrello.md'
+
+AdminSpecificPriceRule:
+  en: 'user-guide/selling/managing-catalog/managing-discounts/catalog-price-rules.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/mettre-en-place-promotions/regles-de-prix.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-descuentos/reglas-de-precios.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-sconti/regole-prezzi-catalogo.md'
+
+AdminShipping:
+  en: 'user-guide/improving-shop/managing-shipping/shipping-preferences.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-livraisons/preferences-livraison.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-transporte/preferencias-de-transporte.md'
+  it: 'guida-utente/migliorare-negozio/gestire-spedizioni/preferenze-di-spedizione.md'
+
+AdminCarriers:
+  en: 'user-guide/improving-shop/managing-shipping/carriers.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-livraisons/gerer-transporteurs.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-transporte/gestionar-transportistas.md'
+  it: 'guida-utente/migliorare-negozio/gestire-spedizioni/corrieri.md'
+
+AdminCarrierWizard:
+  en: 'user-guide/improving-shop/managing-shipping/carriers.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-livraisons/gerer-transporteurs.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-transporte/gestionar-transportistas.md'
+  it: 'guida-utente/migliorare-negozio/gestire-spedizioni/corrieri.md'
+
+AdminLocalization:
+  en: 'user-guide/improving-shop/going-international/localization/localization-settings.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/localisation/parametres-de-localisation.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/localizacion/ajustes-localizacion.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localizzazione/impostazioni-di-localizzazione.md'
+
+AdminLanguages:
+  en: 'user-guide/improving-shop/going-international/localization/languages.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/localisation/langues.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/localizacion/idiomas.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localizzazione/lingue.md'
+
+AdminZones:
+  en: 'user-guide/improving-shop/going-international/locations/zones.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/zones-geographiques/zones.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/ubicaciones-geograficas/zonas.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localita/zone.md'
+
+AdminCountries:
+  en: 'user-guide/improving-shop/going-international/locations/countries.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/zones-geographiques/pays.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/ubicaciones-geograficas/paises.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localita/nazioni.md'
+
+AdminStates:
+  en: 'user-guide/improving-shop/going-international/locations/states.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/zones-geographiques/etats.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/ubicaciones-geograficas/estados-provincias.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localita/province.md'
+
+AdminCurrencies:
+  en: 'user-guide/improving-shop/going-international/localization/currencies.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/localisation/devises.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/localizacion/monedas.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localizzazione/valute.md'
+
+AdminTaxes:
+  en: 'user-guide/improving-shop/going-international/managing-taxes/taxes.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/gerer-taxes/taxes.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/gestionar-impuestos/impuestos.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/gestire-tasse/tasse.md'
+
+AdminTaxRulesGroup:
+  en: 'user-guide/improving-shop/going-international/managing-taxes/tax-rules.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/gerer-taxes/regles-de-taxes.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/gestionar-impuestos/reglas-de-impuestos.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/gestire-tasse/regole-fiscali.md'
+
+AdminTranslations:
+  en: 'user-guide/improving-shop/going-international/translations.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/traductions.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/traducciones.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/traduzioni.md'
+
+module/catalog:
+  en: 'user-guide/improving-shop/managing-modules/modules-and-services/modules-selection.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-modules/modules-et-services/selection-modules.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-modulos/modulos-y-servicios/seleccion-modulos.md'
+  it: 'guida-utente/migliorare-negozio/gestire-moduli/moduli-e-servizi/selezione-moduli.md'
+
+module/manage:
+  en: 'user-guide/improving-shop/managing-modules/modules-and-services/installed-modules.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-modules/modules-et-services/modules-installes.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-modulos/modulos-y-servicios/modulos-instalados.md'
+  it: 'guida-utente/migliorare-negozio/gestire-moduli/moduli-e-servizi/moduli-installati.md'
+
+module/notifications:
+  en: 'user-guide/improving-shop/managing-modules/modules-and-services/module-notifications.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-modules/modules-et-services/notifications-modules.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-modulos/modulos-y-servicios/notificaciones-modulos.md'
+  it: 'guida-utente/migliorare-negozio/gestire-moduli/moduli-e-servizi/notifiche-moduli.md'
+
+AdminAddonsCatalog:
+  en: 'user-guide/improving-shop/managing-modules/module-catalog.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-modules/catalogue-modules.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-modulos/catalogo-modulos.md'
+  it: 'guida-utente/migliorare-negozio/gestire-moduli/catalogo-moduli.md'
+
+AdminModulesPositions:
+  en: 'user-guide/improving-shop/customizing-store-design/positions.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/positions-modules.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/posiciones-modulos.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/posizioni.md'
+
+AdminPayment:
+  en: 'user-guide/improving-shop/managing-payments/payment-methods.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-paiements/mode-paiements.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-pagos/metodos-de-pago.md'
+  it: 'guida-utente/migliorare-negozio/gestire-pagamenti/metodi-di-pagamento.md'
+
+AdminPaymentPreferences:
+  en: 'user-guide/improving-shop/managing-payments/payment-preferences.md'
+  fr: 'guide-utilisateur/optimiser-boutique/gerer-paiements/preferences-paiement.md'
+  es: 'guia-usuario/optimizar-tienda/gestionar-pagos/preferencias-de-pago.md'
+  it: 'guida-utente/migliorare-negozio/gestire-pagamenti/preferenze-di-pagamento.md'
+
+AdminPreferences:
+  en: 'user-guide/configuring-shop/shop-parameters/general-settings/general-parameters.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/general/parametres-generaux.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/preferencias-generales/parametros-generales.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-generali/parametri-generali.md'
+
+AdminOrderPreferences:
+  en: 'user-guide/configuring-shop/shop-parameters/order-settings/orders-preferences.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/commandes/preferences-commandes.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/pedidos/preferencias-de-pedidos.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-ordine/preferenze-ordine.md'
+
+AdminPPreferences:
+  en: 'user-guide/configuring-shop/shop-parameters/product-settings.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/parametres-produits.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/configurar-productos.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-prodotto.md'
+
+AdminCustomerPreferences:
+  en: 'user-guide/configuring-shop/shop-parameters/customer-settings/customer-preferences.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/parametres-clients/preferences-clients.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/configurar-clientes/preferencias-de-clientes.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-clienti/preferenze-clienti.md'
+
+AdminThemes:
+  en: 'user-guide/improving-shop/customizing-store-design/theme-and-logo.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/theme-et-logo.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/tema-y-logotipo.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/tema-e-logo.md'
+
+AdminMeta:
+  en: 'user-guide/configuring-shop/shop-parameters/traffic/seo-and-urls.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/trafic/seo-et-url.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/trafico/seo-y-urls.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/traffico/seo-e-url.md'
+
+AdminCms:
+  en: 'user-guide/improving-shop/customizing-store-design/pages-managing-static-content.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/pages-gerer-contenu-statique.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/paginas-gestionar-contenido-estatico.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/pagine-gestione-contenuti-statici.md'
+
+AdminCmsCategories:
+  en: 'user-guide/improving-shop/customizing-store-design/pages-managing-static-content.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/pages-gerer-contenu-statique.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/paginas-gestionar-contenido-estatico.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/pagine-gestione-contenuti-statici.md'
+
+AdminCmsContent:
+  en: 'user-guide/improving-shop/customizing-store-design/pages-managing-static-content.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/pages-gerer-contenu-statique.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/paginas-gestionar-contenido-estatico.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/pagine-gestione-contenuti-statici.md'
+
+AdminImages:
+  en: 'user-guide/improving-shop/customizing-store-design/image-settings.md'
+  fr: 'guide-utilisateur/optimiser-boutique/personnaliser-apparence-boutique/parametres-images.md'
+  es: 'guia-usuario/optimizar-tienda/personalizar-diseno-tienda/ajustes-imagenes.md'
+  it: 'guida-utente/migliorare-negozio/personalizzare-design-negozio/impostazioni-immagine.md'
+
+AdminStores:
+  en: 'user-guide/configuring-shop/shop-parameters/contact.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/gestion-contacts.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/contactos.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/contatto.md'
+
+AdminSearchConf:
+  en: 'user-guide/configuring-shop/shop-parameters/search/search-parameters.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/recherche/preferences-recherche.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/busqueda/parametros-de-busqueda.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/ricerca/parametri-di-ricerca.md'
+
+AdminMaintenance:
+  en: 'user-guide/configuring-shop/shop-parameters/general-settings/maintenance.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/general/maintenance.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/preferencias-generales/preferencias-de-mantenimiento.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/impostazioni-generali/manutenzione.md'
+
+AdminGeolocation:
+  en: 'user-guide/improving-shop/going-international/localization/geolocation.md'
+  fr: 'guide-utilisateur/optimiser-boutique/internationalisation/localisation/geolocalisation.md'
+  es: 'guia-usuario/optimizar-tienda/mercado-internacional/localizacion/geolocalizacion.md'
+  it: 'guida-utente/migliorare-negozio/diventare-internazionali/localizzazione/geolocalizzazione.md'
+
+AdminInformation:
+  en: 'user-guide/configuring-shop/advanced-parameters/information.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/informations-configuration.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/informacion.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/informazioni.md'
+
+AdminPerformance:
+  en: 'user-guide/configuring-shop/advanced-parameters/performance.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/performance.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/rendimiento.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/performance-prestazioni.md'
+
+AdminEmails:
+  en: 'user-guide/configuring-shop/advanced-parameters/email.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/e-mails.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/correo-electronico.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/e-mail.md'
+
+AdminImport:
+  en: 'user-guide/configuring-shop/advanced-parameters/import.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/importer-donnees.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/importacion.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/importazione.md'
+
+AdminBackup:
+  en: 'user-guide/configuring-shop/advanced-parameters/database/database-backup.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/base-de-donnees/sauvegarde-bdd.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/base-de-datos/copia-seguridad-base-de-datos.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/base-dati/backup-del-database.md'
+
+AdminRequestSql:
+  en: 'user-guide/configuring-shop/advanced-parameters/database/sql-manager.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/base-de-donnees/gestionnaire-sql.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/base-de-datos/gestor-de-consultas-sql.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/base-dati/gestore-sql.md'
+
+AdminLogs:
+  en: 'user-guide/configuring-shop/advanced-parameters/logs.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/logs.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/registros-logs.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/log.md'
+
+AdminWebservice:
+  en: 'user-guide/configuring-shop/advanced-parameters/webservice.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/service-web.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/servicio-web.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/webservice-servizio-web.md'
+
+AdminAdminPreferences:
+  en: 'user-guide/configuring-shop/advanced-parameters/administration.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/administration.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/administracion.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/amministrazione.md'
+
+AdminEmployees:
+  en: 'user-guide/configuring-shop/advanced-parameters/team/employees.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/equipe/employes.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/equipo/empleados.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/squadra/dipendenti.md'
+
+AdminProfiles:
+  en: 'user-guide/configuring-shop/advanced-parameters/team/profiles.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/equipe/profils-employes.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/equipo/perfiles.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/squadra/profili.md'
+
+AdminAccess:
+  en: 'user-guide/configuring-shop/advanced-parameters/team/permissions.md'
+  fr: 'guide-utilisateur/configurer-boutique/parametres-avances/equipe/permissions-employes.md'
+  es: 'guia-usuario/configurar-tienda/parametros-avanzados/equipo/permisos.md'
+  it: 'guida-utente/configurare-negozio/parametri-avanzati/squadra/autorizzazioni.md'
+
+AdminStats:
+  en: 'user-guide/selling/understanding-statistics.md'
+  fr: 'guide-utilisateur/vendre/comprendre-statistiques.md'
+  es: 'guia-usuario/vender/comprender-estadisticas.md'
+  it: 'guida-utente/vendere/capire-statistiche.md'
+
+AdminSearchEngines:
+  en: 'user-guide/configuring-shop/shop-parameters/traffic/search-engines.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/trafic/moteurs-de-recherche.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/trafico/motores-de-busqueda.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/traffico/motori-di-ricerca.md'
+
+AdminReferrers:
+  en: 'user-guide/configuring-shop/shop-parameters/traffic/referrers.md'
+  fr: 'guide-utilisateur/configurer-boutique/configurer-parametres-boutique/trafic/affiliation.md'
+  es: 'guia-usuario/configurar-tienda/parametros-tienda/trafico/programa-de-afiliados.md'
+  it: 'guida-utente/configurare-negozio/parametri-negozio/traffico/affiliati.md'
+
+stock:
+  en: 'user-guide/selling/managing-catalog/managing-stock/stock-overview.md'
+  fr: 'guide-utilisateur/vendre/gerer-catalogue/gerer-stocks/stocks.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-stock/vision-global-stock.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-magazzino/panoramica-magazzino.md'
+
+stock/movements:
+  en: 'user-guide/selling/managing-catalog/managing-stock/stock-movements.md'
+  fr: 'user-guide/selling/managing-catalog/managing-stock/stock-movements.md'
+  es: 'guia-usuario/vender/gestionar-catalogo/gestionar-stock/movimientos-stock.md'
+  it: 'guida-utente/vendere/gestire-catalogo/gestire-magazzino/movimentazioni-magazzino.md'
+
+AdminShopGroup:
+  en: 'user-guide/managing-multiple-shops/creating-new-shop-group.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/creer-groupe-de-boutiques.md'
+  es: 'guia-usuario/gestionar-multiples-tiendas/crear-nuevo-grupo-de-tiendas.md'
+  it: 'guida-utente/gestire-negozi-multipli/creare-nuovo-gruppo-negozi.md'
+
+AdminShop:
+  en: 'user-guide/managing-multiple-shops/creating-new-shop.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/creer-nouvelle-boutique.md'
+  es: 'guia-usuario/gestionar-multiples-tiendas/crear-nueva-tienda.md'
+  it: 'guida-utente/gestire-negozi-multipli/creare-nuovo-negozio.md'
+
+AdminShopUrl:
+  en: 'user-guide/managing-multiple-shops/setting-shop-url.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/mettre-en-place-url-boutique.md'
+  es: 'guia-usuario/gestionar-multiples-tiendas/configurar-url-tienda.md'
+  it: 'guida-utente/gestire-negozi-multipli/impostare-url-negozio.md'

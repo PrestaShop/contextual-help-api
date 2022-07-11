@@ -7,10 +7,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace Help\PrestaShop\Presenter;
 
-namespace Help\PrestaShop;
+use Help\PrestaShop\RequestInfo;
 
-interface ContentBuilderBodyInterface
+interface PresenterInterface
 {
-    public function render(PageInfos $infos, mixed $body): string;
+    public function canPresentWithRequestInfo(RequestInfo $requestInfo): bool;
+    public function presentContentWithRequestInfo(string $content, RequestInfo $requestInfo): string;
 }
