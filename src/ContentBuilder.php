@@ -20,7 +20,7 @@ use Twig\Error\SyntaxError;
 class ContentBuilder
 {
     public function __construct(
-        private ContentProviderInterface $docContentProvider,
+        private ContentProviderBuilder $contentProviderBuilder,
         private ContentBuilderBodyProvider $contentBuilderBodyProvider,
         private PageInfosBuilder $pageInfosBuilder,
         private Environment $twig,
@@ -38,7 +38,7 @@ class ContentBuilder
         try {
             $pageInfos = $this->pageInfosBuilder->getPageInfosFromUri($uri, $version);
 
-            $streamContent = $this->docContentProvider->getContentByPageId($pageInfos->getPageId());
+            $streamContent = $this->contentProviderBuilder->getContentProvider($pageInfos)->getContentByPageInfos($pageInfos);
 
             if (!is_string($streamContent)) {
                 throw new \Exception('Cannot retrieve doc content');

@@ -17,9 +17,10 @@ class PageInfos
     public const PAGE_TYPE_JSON = 'json';
 
     public function __construct(
-        private int $pageId,
-        private string $controller,
+        private ?int $pageId,
+        private ?string $controller,
         private string $language,
+        private ParsedUri $parsedUri,
         private string $pageType = self::PAGE_TYPE_HTML,
         private ?string $callback = null
     ) {
@@ -30,7 +31,7 @@ class PageInfos
         return $this->pageId;
     }
 
-    public function getController(): string
+    public function getController(): ?string
     {
         return $this->controller;
     }
@@ -38,6 +39,11 @@ class PageInfos
     public function getLanguage(): string
     {
         return $this->language;
+    }
+
+    public function getParsedUri(): ParsedUri
+    {
+        return $this->parsedUri;
     }
 
     public function getPageType(): string

@@ -9,10 +9,12 @@
  */
 use Help\PrestaShop\ContentBuilder;
 use Help\PrestaShop\ContentBuilderBodyProvider;
+use Help\PrestaShop\ContentProviderBuilder;
 use Help\PrestaShop\DocContentProvider;
 use Help\PrestaShop\Http\GuzzleAdapter;
 use Help\PrestaShop\Http\HttpClient;
 use Help\PrestaShop\PageInfosBuilder;
+use Help\PrestaShop\ProxyContentProvider;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Symfony\Component\Dotenv\Dotenv;
@@ -24,6 +26,7 @@ require_once dirname(__FILE__) . '/../vendor/autoload.php';
 // const LOG_FILE = __DIR__ . '/../var/logs/dev.log';
 const LOG_FILE = 'php://stdout';
 const STREAM_URL_PATTERN = 'http://doc.prestashop.com/rest/api/content/PAGE_ID?expand=body.view';
+const PROXY_STREAM_URL_PATTERN = 'http://doc.prestashop.com/rest/REQUEST';
 const STREAM_OPTIONS = [
     'http' => [
         'header' => ['Host:doc.prestashop.com'],
@@ -49,8 +52,10 @@ $httpAdapter = new GuzzleAdapter();
 $httpClient = new HttpClient($httpAdapter);
 
 $docContentProvider = new DocContentProvider($httpClient, STREAM_URL_PATTERN, STREAM_OPTIONS);
+$proxyContentProvider = new ProxyContentProvider($httpClient, PROXY_STREAM_URL_PATTERN, STREAM_OPTIONS);
+$contentProviderBuilder = new ContentProviderBuilder($proxyContentProvider, $docContentProvider);
 $contentBuilderBodyProvider = new ContentBuilderBodyProvider($twig, TRANSLATIONS_FILE);
 
-$contentBuilder = new ContentBuilder($docContentProvider, $contentBuilderBodyProvider, $pageInfosBuilder, $twig, $logger);
+$contentBuilder = new ContentBuilder($contentProviderBuilder, $contentBuilderBodyProvider, $pageInfosBuilder, $twig, $logger);
 
 echo $contentBuilder->getContent($_SERVER['REQUEST_URI'], $_GET['version'] ?? null);

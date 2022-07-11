@@ -14,32 +14,13 @@ namespace Help\PrestaShop;
 use Help\PrestaShop\Http\HttpClient;
 use Throwable;
 
-class DocContentProvider implements ContentProviderInterface
+class ProxyContentProvider extends DocContentProvider
 {
-    protected HttpClient $httpClient;
-
-    protected string $urlPattern;
-
-    /**
-     * @var array<string, array>
-     */
-    protected array $urlOptions;
-
-    /**
-     * @param array<string, array> $urlOptions
-     */
-    public function __construct(HttpClient $httpClient, string $urlPattern, array $urlOptions = [])
-    {
-        $this->httpClient = $httpClient;
-        $this->urlPattern = $urlPattern;
-        $this->urlOptions = $urlOptions;
-    }
-
     public function getContentByPageInfos(PageInfos $pageInfos): ?string
     {
         try {
             return $this->httpClient->get(
-                str_replace('PAGE_ID', (string) $pageInfos->getPageId(), $this->urlPattern),
+                str_replace('REQUEST', $pageInfos->getParsedUri()->getQuery()['request'], $this->urlPattern),
                 $this->urlOptions
             );
         } catch (Throwable $exception) {

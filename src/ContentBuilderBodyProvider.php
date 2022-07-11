@@ -20,6 +20,9 @@ class ContentBuilderBodyProvider
     public function getContentBuilderBody(PageInfos $infos): ContentBuilderBodyInterface
     {
         if ($infos->getPageType() === PageInfos::PAGE_TYPE_JSON) {
+            if ($infos->getController() === null) {
+                return new ProxyContentBuilderBody($this->twig);
+            }
             return new JsonContentBuilderBody($this->twig, $this->translationsFile);
         }
 

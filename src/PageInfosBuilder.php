@@ -66,17 +66,20 @@ class PageInfosBuilder
         $version = $this->getVersion($version);
         $mapping = include_once $this->getMappingFilename($version);
 
-        if (!isset($mapping[$controller])) {
-            $controller = self::FALLBACK_CONTROLLER;
-        }
-        if (!isset($mapping[$controller][$language])) {
-            $language = self::FALLBACK_LANGUAGE;
+        if (!$parsedUri->isApiRequest() || $controller !== null) {
+            if (!isset($mapping[$controller])) {
+                $controller = self::FALLBACK_CONTROLLER;
+            }
+            if (!isset($mapping[$controller][$language])) {
+                $language = self::FALLBACK_LANGUAGE;
+            }
         }
 
         return new PageInfos(
-            (int) $mapping[$controller][$language],
+            $mapping[$controller][$language] ?? null,
             $controller,
             $language,
+            $parsedUri,
             $pageType,
             $callback
         );

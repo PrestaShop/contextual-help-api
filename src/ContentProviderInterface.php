@@ -12,5 +12,5 @@ namespace Help\PrestaShop;
 
 interface ContentProviderInterface
 {
-    public function getContentByPageId(int $pageId): ?string;
+    public function getContentByPageInfos(PageInfos $pageInfos): ?string;
 }
