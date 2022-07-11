@@ -7,10 +7,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+namespace Help\PrestaShop\Provider;
 
-namespace Help\PrestaShop;
+use Help\PrestaShop\RequestInfo;
 
-interface ContentProviderInterface
+interface ProviderInterface
 {
-    public function getContentByPageInfos(PageInfos $pageInfos): ?string;
+    public function getContentFromRequestInfo(RequestInfo $requestInfo): string;
 }
