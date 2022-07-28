@@ -1,0 +1,734 @@
+GettingStarted:
+  en: 'english-documentation/user-guide/README.md'
+  fr: 20840479
+  es: 26148902
+  pl: 29656227
+  nl: 37486881
+  de: 31490472
+
+AdminLogin:
+  en: 'english-documentation/user-guide/connecting-to-the-prestashop-back-office.md'
+  fr: 20840777
+  es: 28016708
+  pl: 29656307
+  nl: 37486920
+  de: 31490482
+
+AdminDashboard:
+  en: 'english-documentation/user-guide/discovering-the-administration-area.md'
+  fr: 20840506
+  es: 28016743
+  pl: 29656309
+  nl: 37486921
+  de: 31490487
+
+AdminDashgoals:
+  en: 'english-documentation/user-guide/discovering-the-administration-area.md'
+  fr: 20840506
+  es: 28016743
+  pl: 29656309
+  nl: 37486921
+  de: 31490487
+
+AdminCategories:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-categories.md'
+  fr: 20840708
+  es: 28901410
+  pl: 29656349
+  nl: 37486950
+  de: 41419172
+
+AdminAttributeGenerator:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-products.md'
+  fr: 20840569
+  es: 28344410
+  pl: 29656347
+  nl: 37486949
+  de: 40534212
+
+AdminProducts:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-products.md'
+  fr: 20840569
+  es: 28344410
+  pl: 29656347
+  nl: 37486949
+  de: 40534212
+
+AdminTracking:
+  en: 'english-documentation/user-guide/managing-the-catalog/monitoring-your-catalog.md'
+  fr: 20840710
+  es: 28901421
+  pl: 29656351
+  nl: 37486951
+  de: 41419172
+
+AdminAttributesGroups:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-product-attributes.md'
+  fr: 20840712
+  es: 28901426
+  pl: 29656353
+  nl: 37486952
+  de: 41419176
+
+AdminFeatures:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-product-features.md'
+  fr: 20840714
+  es: 28901442
+  pl: 29656355
+  nl: 37486953
+  de: 41419178
+
+AdminManufacturers:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-manufacturers.md'
+  fr: 20840716
+  es: 28901454
+  pl: 29656357
+  nl: 37486955
+  de: 41419180
+
+AdminSuppliers:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-suppliers.md'
+  fr: 20840718
+  es: 28901458
+  pl: 29656359
+  nl: 37486956
+  de: 41419182
+
+AdminScenes:
+  en: 'english-documentation/user-guide/managing-the-catalog/building-image-maps.md'
+  fr: 20840720
+  es: 28901462
+  pl: 29656361
+  nl: 37486957
+  de: 47644723
+
+AdminTags:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-tags.md'
+  fr: 20840722
+  es: 28901469
+  pl: 29656363
+  nl: 37486958
+  de: 41419184
+
+AdminAttachments:
+  en: 'english-documentation/user-guide/managing-the-catalog/managing-attachments.md'
+  fr: 20840724
+  es: 28901473
+  pl: 29656365
+  nl: 37486960
+  de: 41419186
+
+AdminOrders:
+  en: 'english-documentation/user-guide/managing-orders/orders.md'
+  fr: 20840728
+  es: 28901486
+  pl: 29656374
+  nl: 37486962
+  de: 41419190
+
+AdminInvoices:
+  en: 'english-documentation/user-guide/managing-orders/invoices.md'
+  fr: 20840731
+  es: 28901502
+  pl: 29656376
+  nl: 37486963
+  de: 41419192
+
+AdminReturn:
+  en: 'english-documentation/user-guide/managing-orders/merchandise-returns.md'
+  fr: 20840733
+  es: 28901506
+  pl: 29656378
+  nl: 37486964
+  de: 41419194
+
+AdminDeliverySlip:
+  en: 'english-documentation/user-guide/managing-orders/delivery-slips.md'
+  fr: 20840735
+  es: 28901515
+  pl: 29656380
+  nl: 37486965
+  de: 41419196
+
+AdminSlip:
+  en: 'english-documentation/user-guide/managing-orders/credit-slips.md'
+  fr: 20840737
+  es: 28901517
+  pl: 29656382
+  nl: 37486966
+  de: 41419198
+
+AdminStatuses:
+  en: 'english-documentation/user-guide/managing-orders/statuses.md'
+  fr: 20840739
+  es: 28901531
+  pl: 29656384
+  nl: 37486967
+  de: 41419200
+
+AdminOrderMessage:
+  en: 'english-documentation/user-guide/managing-orders/order-messages.md'
+  fr: 20840741
+  es: 28901536
+  pl: 29656386
+  nl: 37486969
+  de: 41419202
+
+AdminOutstanding:
+  en: 'english-documentation/user-guide/managing-customers/outstanding.md'
+  fr: 21463217
+  es: 28901616
+  pl: 29656728
+  nl: 37486978
+  de: 42139701
+
+AdminCustomers:
+  en: 'english-documentation/user-guide/managing-customers/your-customers.md'
+  fr: 20840745
+  es: 28901549
+  pl: 29656714
+  nl: 37486971
+  de: 41419206
+
+AdminAddresses:
+  en: 'english-documentation/user-guide/managing-customers/customer-addresses.md'
+  fr: 20840747
+  es: 28901577
+  pl: 29656716
+  nl: 37486972
+  de: 41419208
+
+AdminGroups:
+  en: 'english-documentation/user-guide/managing-customers/customer-groups.md'
+  fr: 20840749
+  es: 28901583
+  pl: 29656718
+  nl: 37486973
+  de: 41419210
+
+AdminCarts:
+  en: 'english-documentation/user-guide/managing-customers/shopping-carts.md'
+  fr: 20840751
+  es: 28901589
+  pl: 29656720
+  nl: 37486974
+  de: 41419212
+
+AdminCustomerThreads:
+  en: 'english-documentation/user-guide/managing-customers/customer-service.md'
+  fr: 20840754
+  es: 28901593
+  pl: 29656722
+  nl: 37486975
+  de: 41419214
+
+AdminContacts:
+  en: 'english-documentation/user-guide/managing-customers/your-contacts.md'
+  fr: 20840756
+  es: 28901601
+  pl: 29656724
+  nl: 37486976
+  de: 41419216
+
+AdminGenders:
+  en: 'english-documentation/user-guide/managing-customers/social-titles.md'
+  fr: 20840758
+  es: 28901612
+  pl: 29656726
+  nl: 37486977
+  de: 41419218
+
+AdminCartRules:
+  en: 'english-documentation/user-guide/creating-price-rules-and-vouchers/cart-rules.md'
+  fr: 20840762
+  es: 28901631
+  pl: 29656546
+  nl: 37486980
+  de: 42139673
+
+AdminSpecificPriceRule:
+  en: 'english-documentation/user-guide/creating-price-rules-and-vouchers/catalog-price-rules.md'
+  fr: 20840764
+  es: 28901648
+  pl: 29656532
+  nl: 37486981
+  de: 42139675
+
+AdminMarketing:
+  en: 'english-documentation/user-guide/creating-price-rules-and-vouchers/marketing-modules.md'
+  fr: 20840766
+  es: 28901656
+  pl: 29656548
+  nl: 37486982
+  de: 42139677
+
+AdminShipping:
+  en: 'english-documentation/user-guide/managing-shipping/shipping-preferences.md'
+  fr: 20840770
+  es: 29655181
+  pl: 29656813
+  nl: 37487014
+  de: 43614225
+
+AdminCarriers:
+  en: 'english-documentation/user-guide/managing-shipping/managing-carriers.md'
+  fr: 20840772
+  es: 29655173
+  pl: 29656811
+  nl: 37487013
+  de: 43614223
+
+AdminCarrierWizard:
+  en: 'english-documentation/user-guide/managing-shipping/managing-carriers.md'
+  fr: 20840772
+  es: 29655173
+  pl: 29656811
+  nl: 37487013
+  de: 43614223
+
+AdminLocalization:
+  en: 'english-documentation/user-guide/understanding-local-settings/localization.md'
+  fr: 20840781
+  es: 29655190
+  pl: 29656836
+  nl: 37487016
+  de: 43614229
+
+AdminLanguages:
+  en: 'english-documentation/user-guide/understanding-local-settings/languages.md'
+  fr: 20840785
+  es: 29655194
+  pl: 29656838
+  nl: 37487017
+  de: 43614231
+
+AdminZones:
+  en: 'english-documentation/user-guide/understanding-local-settings/zones.md'
+  fr: 20840787
+  es: 29655196
+  pl: 29656840
+  nl: 37487018
+  de: 43614233
+
+AdminCountries:
+  en: 'english-documentation/user-guide/understanding-local-settings/countries.md'
+  fr: 20840791
+  es: 29655198
+  pl: 29656842
+  nl: 37487019
+  de: 43614235
+
+AdminStates:
+  en: 'english-documentation/user-guide/understanding-local-settings/states.md'
+  fr: 20840795
+  es: 29655202
+  pl: 31490177
+  nl: 37487020
+  de: 43614237
+
+AdminCurrencies:
+  en: 'english-documentation/user-guide/understanding-local-settings/currencies.md'
+  fr: 20840797
+  es: 29655204
+  pl: 29656844
+  nl: 37487027
+  de: 43614239
+
+AdminTaxes:
+  en: 'english-documentation/user-guide/understanding-local-settings/taxes.md'
+  fr: 20840799
+  es: 29655206
+  pl: 29656847
+  nl: 37487024
+  de: 43614241
+
+AdminTaxRulesGroup:
+  en: 'english-documentation/user-guide/understanding-local-settings/tax-rules.md'
+  fr: 20840801
+  es: 29655209
+  pl: 29656849
+  nl: 37487023
+  de: 43614243
+
+AdminTranslations:
+  en: 'english-documentation/user-guide/understanding-local-settings/translations.md'
+  fr: 20840803
+  es: 29655211
+  pl: 29656851
+  nl: 37487025
+  de: 43614245
+
+AdminModules:
+  en: 'english-documentation/user-guide/managing-modules-and-themes/your-modules.md'
+  fr: 20840810
+  es: 29065229
+  pl: 29656508
+  nl: 37486984
+  de: 42139681
+
+AdminAddonsCatalog:
+  en: 'english-documentation/user-guide/managing-modules-and-themes/modules-and-themes-catalog.md'
+  fr: 20840812
+  es: 29065241
+  pl: 29656510
+  nl: 37486985
+  de: 42139683
+
+AdminModulesPositions:
+  en: 'english-documentation/user-guide/managing-modules-and-themes/front-office-positions.md'
+  fr: 20840815
+  es: 29065254
+  pl: 29656514
+  nl: 37486986
+  de: 42139685
+
+AdminPayment:
+  en: 'english-documentation/user-guide/managing-modules-and-themes/payment-settings.md'
+  fr: 20840817
+  es: 29655042
+  pl: 29656512
+  nl: 37486987
+  de: 42139687
+
+AdminPreferences:
+  en: 'english-documentation/user-guide/understanding-the-preferences/general-preferences.md'
+  fr: 20840865
+  es: 29655220
+  pl: 29656571
+  nl: 37487029
+  de: 43614251
+
+AdminOrderPreferences:
+  en: 'english-documentation/user-guide/understanding-the-preferences/orders-preferences.md'
+  fr: 20840867
+  es: 29655222
+  pl: 29656573
+  nl: 37487034
+  de: 43614253
+
+AdminPPreferences:
+  en: 'english-documentation/user-guide/understanding-the-preferences/products-preferences.md'
+  fr: 20840869
+  es: 29655225
+  pl: 29656575
+  nl: 37487030
+  de: 43614255
+
+AdminCustomerPreferences:
+  en: 'english-documentation/user-guide/understanding-the-preferences/customers-preferences.md'
+  fr: 20840871
+  es: 29655229
+  pl: 29656577
+  nl: 37487031
+  de: 43614257
+
+AdminThemes:
+  en: 'english-documentation/user-guide/understanding-the-preferences/themes-preferences.md'
+  fr: 20840873
+  es: 29655231
+  pl: 29656579
+  nl: 37487032
+  de: 43614259
+
+AdminMeta:
+  en: 'english-documentation/user-guide/understanding-the-preferences/seo-and-urls-preferences.md'
+  fr: 20840875
+  es: 29655253
+  pl: 29656581
+  nl: 37487033
+  de: 43614261
+
+AdminCms:
+  en: 'english-documentation/user-guide/understanding-the-preferences/cms-managing-static-content.md'
+  fr: 20840877
+  es: 29655260
+  pl: 29656583
+  nl: 37487041
+  de: 43614263
+
+AdminCmsCategories:
+  en: 'english-documentation/user-guide/understanding-the-preferences/cms-managing-static-content.md'
+  fr: 20840877
+  es: 29655260
+  pl: 29656583
+  nl: 37487041
+  de: 43614263
+
+AdminCmsContent:
+  en: 'english-documentation/user-guide/understanding-the-preferences/cms-managing-static-content.md'
+  fr: 20840877
+  es: 29655260
+  pl: 29656583
+  nl: 37487041
+  de: 43614263
+
+AdminImages:
+  en: 'english-documentation/user-guide/understanding-the-preferences/images-preferences.md'
+  fr: 20840879
+  es: 29655262
+  pl: 29656585
+  nl: 37487049
+  de: 43614265
+
+AdminStores:
+  en: 'english-documentation/user-guide/understanding-the-preferences/store-contacts-preferences.md'
+  fr: 20840881
+  es: 29655264
+  pl: 29656587
+  nl: 37487050
+  de: 43614267
+
+AdminSearchConf:
+  en: 'english-documentation/user-guide/understanding-the-preferences/search-preferences.md'
+  fr: 20840883
+  es: 29655269
+  pl: 29656589
+  nl: 37487052
+  de: 43614269
+
+AdminMaintenance:
+  en: 'english-documentation/user-guide/understanding-the-preferences/maintenance-settings.md'
+  fr: 20840885
+  es: 29655273
+  pl: 29656591
+  nl: 37487053
+  de: 43614271
+
+AdminGeolocation:
+  en: 'english-documentation/user-guide/understanding-the-preferences/geolocation-preferences.md'
+  fr: 20840887
+  es: 29655275
+  pl: 29656593
+  nl: 37487055
+  de: 43614273
+
+AdminInformation:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/configuration-information.md'
+  fr: 20840891
+  es: 29655279
+  pl: 29656552
+  nl: 37487057
+  de: 43614277
+
+AdminPerformance:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/performance-parameters.md'
+  fr: 20840893
+  es: 29655284
+  pl: 29656554
+  nl: 37487058
+
+AdminEmails:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/e-mail-parameters.md'
+  fr: 20840895
+  es: 29655290
+  pl: 29656556
+  nl: 37487059
+  de: 43614281
+
+AdminImport:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/csv-import-parameters.md'
+  fr: 20840899
+  es: 29655303
+  pl: 29656560
+  nl: 37487062
+  de: 43614277
+
+AdminBackup:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/db-backup.md'
+  fr: 20840901
+  es: 29655312
+  pl: 29656562
+  nl: 37487063
+  de: 43614287
+
+AdminRequestSql:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/sql-manager.md'
+  fr: 20840903
+  es: 29655316
+  pl: 29656564
+  nl: 37487065
+  de: 43614289
+
+AdminLogs:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/logs-parameters.md'
+  fr: 20840905
+  es: 29655321
+  pl: 29656567
+  nl: 37487067
+  de: 43614291
+
+AdminWebservice:
+  en: 'english-documentation/user-guide/understanding-the-advanced-parameters/webservice-parameters.md'
+  fr: 20840908
+  es: 29655323
+  pl: 29656569
+  nl: 37487069
+  de: 43614293
+
+AdminAdminPreferences:
+  en: 'english-documentation/user-guide/administering-the-back-office/administration-preferences.md'
+  fr: 20840912
+  es: 29655331
+  pl: 29656595
+  nl: 37487071
+  de: 43614297
+
+AdminQuickAccesses:
+  en: 'english-documentation/user-guide/administering-the-back-office/quick-access-configuration.md'
+  fr: 20840916
+  es: 29655335
+  pl: 29656597
+  nl: 37487072
+  de: 43614299
+
+AdminEmployees:
+  en: 'english-documentation/user-guide/administering-the-back-office/employees-accounts-configuration.md'
+  fr: 20840918
+  es: 29655337
+  pl: 29656599
+  nl: 37487073
+  de: 43614301
+
+AdminProfiles:
+  en: 'english-documentation/user-guide/administering-the-back-office/employee-profiles.md'
+  fr: 20840921
+  es: 29655339
+  pl: 29656601
+  nl: 37487098
+  de: 43614303
+
+AdminAccess:
+  en: 'english-documentation/user-guide/administering-the-back-office/profile-permissions.md'
+  fr: 20840923
+  es: 29655341
+  pl: 29656603
+  nl: 37487076
+  de: 43614305
+
+AdminTabs:
+  en: 'english-documentation/user-guide/administering-the-back-office/administration-menus-configuration.md'
+  fr: 20840926
+  es: 29655348
+  pl: 29656605
+  nl: 37487074
+  de: 43614307
+
+AdminGamification:
+  en: 'english-documentation/user-guide/administering-the-back-office/merchant-expertise.md'
+  fr: 20840928
+  es: 29655350
+  pl: 29656607
+  nl: 37487078
+  de: 43614309
+
+AdminStats:
+  en: 'english-documentation/user-guide/understanding-statistics/statistics.md'
+  fr: 20840933
+  es: 29655356
+  pl: 29656963
+  nl: 37487080
+  de: 43614313
+
+AdminSearchEngines:
+  en: 'english-documentation/user-guide/understanding-statistics/search-engines.md'
+  fr: 20840935
+  es: 29655363
+  pl: 29656965
+  nl: 37487082
+  de: 43614315
+
+AdminReferrers:
+  en: 'english-documentation/user-guide/understanding-statistics/referrers.md'
+  fr: 20840937
+  es: 29655367
+  pl: 29656967
+  nl: 37487083
+  de: 43614317
+
+AdminStock:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminStockConfiguration:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminStockCover:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminStockInstantState:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminStockManagement:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminStockMvt:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminSupplyOrders:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminWarehouses:
+  en: 'english-documentation/user-guide/advanced-stock-management/presenting-the-stock-management-interface.md'
+  fr: 20840945
+  es: 29655391
+  pl: 29657020
+  nl: 37487087
+  de: 44892240
+
+AdminShopGroup:
+  en: 'english-documentation/user-guide/managing-multiple-shops/creating-a-new-shop-group.md'
+  fr: 20840953
+  es: 29655438
+  pl: 29657002
+  nl: 37487092
+  de: 37486630
+
+AdminShop:
+  en: 'english-documentation/user-guide/managing-multiple-shops/creating-a-new-shop.md'
+  fr: 20840955
+  es: 29655445
+  pl: 29657004
+  nl: 37487100
+  de: 37486635
+
+AdminShopUrl:
+  en: 'english-documentation/user-guide/managing-multiple-shops/setting-a-shops-url.md'
+  fr: 20840957
+  es: 29655447
+  pl: 29657006
+  nl: 37487093
+  de: 47644912
