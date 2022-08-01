@@ -37,4 +37,3 @@ services:
     arguments:
       - '@Help\PrestaShop\Presenter\HtmlPresenter'
       - '@Help\PrestaShop\Presenter\JsonPresenter'
-      - '@Help\PrestaShop\Presenter\ProxyPresenter'

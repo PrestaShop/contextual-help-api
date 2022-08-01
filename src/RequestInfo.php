@@ -42,11 +42,6 @@ class RequestInfo
         return reset($this->pathElements) === 'api' && !empty($this->request);
     }
 
-    public function isProxyRequest(): bool
-    {
-        return $this->isApiRequest() && empty($this->request['getHelp']);
-    }
-
     /**
      * @return string[]
      */
@@ -90,11 +85,7 @@ class RequestInfo
     public function getController(): ?string
     {
         if ($this->isApiRequest()) {
-            if ($this->isProxyRequest()) {
-                return null;
-            }
-
-            return $this->getRequest()['getHelp'];
+            return $this->getRequest()['getHelp'] ?? null;
         }
 
         return $this->getPathElements()[2] ?? null;
