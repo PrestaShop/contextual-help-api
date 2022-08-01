@@ -1,0 +1,11 @@
+GettingStarted:
+  en: 'user-guide/README.md'
+  fr: 'guide-utilisateur/README.md'
+  es: 'guia-usuario/README.md'
+  it: 'guida-utente/README.md'
+
+AdminLogin:
+  en: 'user-guide/connecting-back-office.md'
+  fr: 'guide-utilisateur/connexion-back-office.md'
+  es: 'guia-usuario/conexion-back-office.md'
+  it: 'guida-utente/connettersi-al-back-office.md'

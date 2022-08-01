@@ -23,6 +23,13 @@ class ApplicationCompilerPass implements CompilerPassInterface
     private const FALLBACK_VERSION = '1.7';
     private const FALLBACK_LANGUAGE = 'en';
 
+    private string $configDir;
+
+    public function __construct(string $configDir)
+    {
+        $this->configDir = rtrim($configDir, '/');
+    }
+
     public function process(ContainerBuilder $container): void
     {
         $requestInfo = RequestInfo::fromRequestUri($_SERVER['REQUEST_URI']);
@@ -75,11 +82,11 @@ class ApplicationCompilerPass implements CompilerPassInterface
 
     private function getMappingFilename(string $version): string
     {
-        return sprintf(__DIR__ . '/../../config/mapping_v%s.yml', $version);
+        return sprintf($this->configDir . '/mapping_v%s.yml', $version);
     }
 
     private function getRepositoryMappingFilename(): string
     {
-        return __DIR__ . '/../../config/mapping_repositories.yml';
+        return $this->configDir . '/mapping_repositories.yml';
     }
 }
