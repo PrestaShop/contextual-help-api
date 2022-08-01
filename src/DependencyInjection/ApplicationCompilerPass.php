@@ -12,6 +12,7 @@ declare(strict_types=1);
 namespace Help\PrestaShop\DependencyInjection;
 
 use Help\PrestaShop\RequestInfo;
+use RuntimeException;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -22,16 +23,20 @@ class ApplicationCompilerPass implements CompilerPassInterface
     private const FALLBACK_VERSION = '1.7';
     private const FALLBACK_LANGUAGE = 'en';
 
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $requestInfo = RequestInfo::fromRequestUri($_SERVER['REQUEST_URI']);
 
         $container->set(RequestInfo::class, $requestInfo);
         $container->setDefinition(RequestInfo::class, (new Definition(RequestInfo::class))->setSynthetic(true));
 
-        $langRepositories = Yaml::parse(file_get_contents($this->getRepositoryMappingFilename()));
+        $langRepositories = Yaml::parse(file_get_contents($this->getRepositoryMappingFilename()) ?: '');
+        if (!is_array($langRepositories)) {
+            throw new RuntimeException('Unable to get the repository mapping');
+        }
+
         krsort($langRepositories);
-        $latestVersion = key($langRepositories);
+        $latestVersion = (string) key($langRepositories);
 
         $version = $this->getVersion($requestInfo->getVersion());
         if (!file_exists($this->getMappingFilename($version))) {
@@ -42,7 +47,10 @@ class ApplicationCompilerPass implements CompilerPassInterface
             }
         }
 
-        $mapping = Yaml::parse(file_get_contents($this->getMappingFilename($version)));
+        $mapping = Yaml::parse(file_get_contents($this->getMappingFilename($version)) ?: '');
+        if (!is_array($mapping)) {
+            throw new RuntimeException('Unable to get the version mapping');
+        }
 
         $language = $requestInfo->getLanguage();
         if (!isset($langRepositories[$version][$language])) {
@@ -60,7 +68,7 @@ class ApplicationCompilerPass implements CompilerPassInterface
             return self::FALLBACK_VERSION;
         }
 
-        $version = preg_replace('/[^0-9.]/', '', $version);
+        $version = preg_replace('/[^0-9.]/', '', $version) ?? '';
 
         return str_pad(join('.', array_slice(explode('.', $version), 0, 2)), 3, '.0');
     }

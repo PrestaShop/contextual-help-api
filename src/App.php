@@ -27,11 +27,11 @@ class App
         $this->presenterBuilder = $presenterBuilder;
     }
 
-    public function run(): void
+    public function run(): string
     {
         $content = $this->githubProvider->getContentFromRequestInfo($this->requestInfo);
 
-        echo $this->presenterBuilder
+        return $this->presenterBuilder
             ->getPresenter($this->requestInfo)
             ->presentContentWithRequestInfo($content, $this->requestInfo)
         ;

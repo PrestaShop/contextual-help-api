@@ -11,7 +11,6 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop\Presenter;
 
-
 use Help\PrestaShop\RequestInfo;
 use HTMLPurifier;
 use League\CommonMark\GithubFlavoredMarkdownConverter;

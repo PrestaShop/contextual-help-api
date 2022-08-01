@@ -26,5 +26,7 @@ $loader->load('services.yml');
 $containerBuilder->addCompilerPass(new ApplicationCompilerPass());
 
 $containerBuilder->compile(true);
+/** @var App $app */
+$app = $containerBuilder->get(App::class);
 
-echo $containerBuilder->get(App::class)->run();
+echo $app->run();

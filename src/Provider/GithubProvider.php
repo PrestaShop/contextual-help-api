@@ -22,8 +22,15 @@ class GithubProvider implements ProviderInterface
     private Client $client;
     private string $language;
     private string $repository;
+    /** @var string[][] */
     private array $mapping;
 
+    /**
+     * @param Client $client
+     * @param string $language
+     * @param string $repository
+     * @param string[][] $mapping
+     */
     public function __construct(Client $client, string $language, string $repository, array $mapping)
     {
         $this->client = $client;
