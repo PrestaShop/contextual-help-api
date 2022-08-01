@@ -12,12 +12,18 @@ declare(strict_types=1);
 namespace Help\PrestaShop\Presenter;
 
 use Help\PrestaShop\RequestInfo;
+use RuntimeException;
 
 class PresenterBuilder
 {
+    /** @var non-empty-array<PresenterInterface> */
     private array $presenters;
+
     public function __construct(PresenterInterface ...$presenters)
     {
+        if (empty($presenters)) {
+            throw new RuntimeException(self::class . ' requires at least 1 presenter');
+        }
         $this->presenters = $presenters;
     }
 

@@ -13,13 +13,16 @@ namespace Help\PrestaShop;
 
 class RequestInfo
 {
+    /** @var string[] */
     private array $pathElements;
+    /** @var string[] */
     private array $query;
+    /** @var string[] */
     private array $request;
 
     private function __construct(string $uri)
     {
-        $urlComponents = parse_url($uri);
+        $urlComponents = parse_url($uri) ?: [];
         $pathElements = explode('/', trim($urlComponents['path'] ?? '', '/'));
         parse_str($urlComponents['query'] ?? '', $query);
         parse_str($query['request'] ?? '', $request);
@@ -44,16 +47,25 @@ class RequestInfo
         return $this->isApiRequest() && empty($this->request['getHelp']);
     }
 
+    /**
+     * @return string[]
+     */
     public function getPathElements(): array
     {
         return $this->pathElements;
     }
 
+    /**
+     * @return string[]
+     */
     public function getQuery(): array
     {
         return $this->query;
     }
 
+    /**
+     * @return string[]
+     */
     public function getRequest(): array
     {
         return $this->request;
@@ -81,6 +93,7 @@ class RequestInfo
             if ($this->isProxyRequest()) {
                 return null;
             }
+
             return $this->getRequest()['getHelp'];
         }
 

@@ -62,7 +62,7 @@ jobs:
             run: composer install --ansi --prefer-dist --no-interaction --no-progress
 
         -   name: Run phpstan
-            run: _PS_ROOT_DIR_=./ php ./vendor/bin/phpstan analyse -c phpstan.neon
+            run: php ./vendor/bin/phpstan analyse -c phpstan.neon
 
   phpunit:
       name: PHPUnit
