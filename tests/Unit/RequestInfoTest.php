@@ -26,15 +26,6 @@ class RequestInfoTest extends TestCase
     }
 
     /**
-     * @dataProvider isProxyProvider
-     */
-    public function testIsProxy(string $uri, bool $isProxy): void
-    {
-        $requestInfo = RequestInfo::fromRequestUri($uri);
-        $this->assertSame($isProxy, $requestInfo->isProxyRequest());
-    }
-
-    /**
      * @dataProvider pathElementsProvider
      *
      * @param string[] $pathElements
@@ -106,20 +97,6 @@ class RequestInfoTest extends TestCase
         yield ['/api?request=foo%3Dbar', true];
         yield ['/api/?request=foo%3Dbar', true];
         yield ['/api?request=getHelp%3Dbar', true];
-    }
-
-    /**
-     * @return iterable<array{string, bool}>
-     */
-    public function isProxyProvider(): iterable
-    {
-        yield ['dfsfsf', false];
-        yield ['/api', false];
-        yield ['/api?request=', false];
-        yield ['/api/?request=', false];
-        yield ['/api?request=foo%3Dbar', true];
-        yield ['/api/?request=foo%3Dbar', true];
-        yield ['/api?request=getHelp%3Dbar', false];
     }
 
     /**
