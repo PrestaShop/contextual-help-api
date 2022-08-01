@@ -23,7 +23,7 @@ $dotenv->loadEnv(__DIR__ . '/../.env');
 $containerBuilder = new ContainerBuilder();
 $loader = new YamlFileLoader($containerBuilder, new FileLocator(__DIR__ . '/../config'));
 $loader->load('services.yml');
-$containerBuilder->addCompilerPass(new ApplicationCompilerPass());
+$containerBuilder->addCompilerPass(new ApplicationCompilerPass(__DIR__ . '/../config'));
 
 $containerBuilder->compile(true);
 /** @var App $app */

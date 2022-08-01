@@ -11,8 +11,7 @@
 namespace Tests\Integration\Features\Context;
 
 use Behat\Behat\Context\Context;
-use Help\PrestaShop\Http\GuzzleAdapter;
-use Help\PrestaShop\Http\HttpClient;
+use GuzzleHttp\Client;
 
 class HttpRequestsContext implements Context
 {
@@ -27,9 +26,8 @@ class HttpRequestsContext implements Context
      */
     public function getHttpContent(string $url): void
     {
-        $httpAdapter = new GuzzleAdapter();
-        $httpClient = new HttpClient($httpAdapter);
-        $this->lastResult = $httpClient->get(self::BASE_URL . $url);
+        $httpClient = new Client();
+        $this->lastResult = $httpClient->get(self::BASE_URL . $url)->getBody()->getContents();
     }
 
     /**
