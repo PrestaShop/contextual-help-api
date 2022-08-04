@@ -8,9 +8,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Help\PrestaShop;
+namespace Help\PrestaShop\Provider;
 
-interface ContentProviderInterface
+use Help\PrestaShop\RequestInfo;
+
+interface ProviderInterface
 {
-    public function getContentByPageId(int $pageId): ?string;
+    public function getContentFromRequestInfo(RequestInfo $requestInfo): string;
 }

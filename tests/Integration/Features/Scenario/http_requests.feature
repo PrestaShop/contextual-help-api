@@ -5,4 +5,4 @@ Feature: Tests HTTP requests responses
     When I get the content of "/en/doc/AdminDashboard?version=1.7.8.0"
     Then I should get a success response
     When I get the content of "/en/AdminDashboard?version=1.7.8.0"
-    Then I should get an error response
+    Then I should get a success response

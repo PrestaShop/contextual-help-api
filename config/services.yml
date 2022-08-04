@@ -1,0 +1,39 @@
+parameters:
+  env(GA_ACCOUNT_KEY): ''
+
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    bind:
+      $language: '%language%'
+      $repository: '%repository%'
+      $mapping: '%mapping%'
+
+  HTMLPurifier:
+    class: HTMLPurifier
+
+  League\CommonMark\GithubFlavoredMarkdownConverter:
+
+  GuzzleHttp\Client:
+
+  Twig\Loader\LoaderInterface:
+    alias: Twig\Loader\FilesystemLoader
+
+  Twig\Loader\FilesystemLoader:
+    arguments: ['../views/']
+
+  Twig\Environment:
+    calls:
+      - addGlobal: ['ga_account_key', '%env(GA_ACCOUNT_KEY)%']
+
+  Help\PrestaShop\:
+    resource: '../src/*'
+
+  Help\PrestaShop\App:
+    public: true
+
+  Help\PrestaShop\Presenter\PresenterBuilder:
+    arguments:
+      - '@Help\PrestaShop\Presenter\HtmlPresenter'
+      - '@Help\PrestaShop\Presenter\JsonPresenter'

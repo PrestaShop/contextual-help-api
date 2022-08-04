@@ -8,14 +8,18 @@
     "php": ">=8.0.7",
     "ezyang/htmlpurifier": "^4.13",
     "guzzlehttp/guzzle": "^7.3",
+    "league/commonmark": "^2.3",
     "monolog/monolog": "^2.3",
+    "symfony/config": "^6.0",
+    "symfony/dependency-injection": "^6.0",
     "symfony/dotenv": "^5.3",
+    "symfony/yaml": "^6.0",
     "twig/twig": "^3.3"
   },
   "require-dev": {
     "behat/behat": "^3.8",
     "nikic/php-parser": "^4.11",
-    "phpstan/phpstan": "^0.12.91",
+    "phpstan/phpstan": "^1.8.2",
     "phpunit/phpunit": "^9.5",
     "prestashop/php-dev-tools": "^4.1"
   },

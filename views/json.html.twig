@@ -1,0 +1,23 @@
+<nav id="main-nav" class="main-nav"></nav>
+<div class="page-wrap">
+    <header class="main-header bar bar-nav"></header>
+    <div id="search-results" class="hide"></div>
+    <div class="content">
+        <section class="article">
+            {{ body|raw }}
+        </section>
+        <section class="suggested">
+            <header>
+                <h4>{{ useful_links }}</h4>
+            </header>
+            <div class="list-group">
+                <a class="list-group-item push-right" href="http://www.prestashop.com/forums/" target="_blank">
+                    <strong>{{ prestaShop_Forum }}</strong>
+                </a>
+                <a class="list-group-item push-right" href="http://docs.prestashop-project.org/" target="_blank">
+                    <strong>{{ full_doc }}</strong>
+                </a>
+            </div>
+        </section>
+    </div>
+</div>
