@@ -10,11 +10,11 @@
 
 namespace Help\PrestaShop\Presenter;
 
-use Help\PrestaShop\RequestInfo;
+use Help\PrestaShop\ProviderInfo;
 
 interface PresenterInterface
 {
-    public function canPresentWithRequestInfo(RequestInfo $requestInfo): bool;
+    public function canPresentWithProviderInfo(ProviderInfo $providerInfo): bool;
 
-    public function presentContentWithRequestInfo(string $content, RequestInfo $requestInfo): string;
+    public function presentContentWithProviderInfo(string $content, ProviderInfo $providerInfo): string;
 }

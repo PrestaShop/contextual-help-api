@@ -1,0 +1,13 @@
+'1.6':
+  github:
+    en: 'user-documentation-1.6'
+'1.7':
+  github:
+    en: 'user-documentation-en'
+    fr: 'user-documentation-fr'
+    it: 'user-documentation-it'
+    es: 'user-documentation-es'
+'8.0':
+  github:
+    en: 'user-documentation-v8-en'
+    fr: 'user-documentation-v8-fr'

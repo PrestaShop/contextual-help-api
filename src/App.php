@@ -16,24 +16,24 @@ use Help\PrestaShop\Provider\GithubProvider;
 
 class App
 {
-    private RequestInfo $requestInfo;
+    private ProviderInfo $providerInfo;
     private GithubProvider $githubProvider;
     private PresenterBuilder $presenterBuilder;
 
-    public function __construct(RequestInfo $requestInfo, GithubProvider $githubProvider, PresenterBuilder $presenterBuilder)
+    public function __construct(ProviderInfo $providerInfo, GithubProvider $githubProvider, PresenterBuilder $presenterBuilder)
     {
-        $this->requestInfo = $requestInfo;
+        $this->providerInfo = $providerInfo;
         $this->githubProvider = $githubProvider;
         $this->presenterBuilder = $presenterBuilder;
     }
 
     public function run(): string
     {
-        $content = $this->githubProvider->getContentFromRequestInfo($this->requestInfo);
+        $content = $this->githubProvider->getContentFromProviderInfo($this->providerInfo);
 
         return $this->presenterBuilder
-            ->getPresenter($this->requestInfo)
-            ->presentContentWithRequestInfo($content, $this->requestInfo)
+            ->getPresenter($this->providerInfo)
+            ->presentContentWithProviderInfo($content, $this->providerInfo)
         ;
     }
 }

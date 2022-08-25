@@ -11,30 +11,30 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop\Presenter;
 
-use Help\PrestaShop\RequestInfo;
+use Help\PrestaShop\ProviderInfo;
 use HTMLPurifier;
-use League\CommonMark\GithubFlavoredMarkdownConverter;
+use League\CommonMark\MarkdownConverter;
 use Twig\Environment;
 
 class HtmlPresenter implements PresenterInterface
 {
     protected Environment $twig;
-    protected GithubFlavoredMarkdownConverter $converter;
+    protected MarkdownConverter $converter;
     protected HTMLPurifier $purifier;
 
-    public function __construct(Environment $twig, GithubFlavoredMarkdownConverter $converter, HTMLPurifier $purifier)
+    public function __construct(Environment $twig, MarkdownConverter $converter, HTMLPurifier $purifier)
     {
         $this->twig = $twig;
         $this->converter = $converter;
         $this->purifier = $purifier;
     }
 
-    public function canPresentWithRequestInfo(RequestInfo $requestInfo): bool
+    public function canPresentWithProviderInfo(ProviderInfo $providerInfo): bool
     {
-        return count($requestInfo->getPathElements()) >= 3;
+        return $providerInfo->getType() === ProviderInfo::TYPE_HTML;
     }
 
-    public function presentContentWithRequestInfo(string $content, RequestInfo $requestInfo): string
+    public function presentContentWithProviderInfo(string $content, ProviderInfo $providerInfo): string
     {
         return $this->twig->render('index.html.twig', [
             'body' => $this->prepareBody($content),
@@ -44,8 +44,10 @@ class HtmlPresenter implements PresenterInterface
     protected function prepareBody(string $body): string
     {
         $body = $this->converter->convert($body)->getContent();
-        $body = strip_tags($body, '<ul><ol><li><div><p><h1><h2><h3><strong>');
         $body = str_replace('****', '', $body); // Gitbook issue with bold links
+
+        $this->purifier->config->set('HTML.Forms', true);
+        $this->purifier->config->set('HTML.TargetBlank', true);
 
         return $this->purifier->purify($body);
     }

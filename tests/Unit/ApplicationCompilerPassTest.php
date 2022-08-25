@@ -43,7 +43,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping16],
-                ['language', 'en'],
                 ['repository', 'user-documentation-1.6']
             )
         ;
@@ -59,7 +58,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping16],
-                ['language', 'en'],
                 ['repository', 'user-documentation-1.6']
             )
         ;
@@ -75,7 +73,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping16],
-                ['language', 'en'],
                 ['repository', 'user-documentation-1.6']
             )
         ;
@@ -91,7 +88,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping17],
-                ['language', 'en'],
                 ['repository', 'user-documentation-en']
             )
         ;
@@ -107,7 +103,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping17],
-                ['language', 'fr'],
                 ['repository', 'user-documentation-fr']
             )
         ;
@@ -123,7 +118,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping17],
-                ['language', 'fr'],
                 ['repository', 'user-documentation-fr']
             )
         ;
@@ -139,7 +133,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping17],
-                ['language', 'en'],
                 ['repository', 'user-documentation-en']
             )
         ;
@@ -155,7 +148,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping17],
-                ['language', 'en'],
                 ['repository', 'user-documentation-en']
             )
         ;
@@ -171,7 +163,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping8],
-                ['language', 'en'],
                 ['repository', 'user-documentation-v8-en']
             )
         ;
@@ -187,7 +178,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping8],
-                ['language', 'fr'],
                 ['repository', 'user-documentation-v8-fr']
             )
         ;
@@ -203,7 +193,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping8],
-                ['language', 'en'],
                 ['repository', 'user-documentation-v8-en']
             )
         ;
@@ -219,7 +208,6 @@ class ApplicationCompilerPassTest extends TestCase
             ->method('setParameter')
             ->withConsecutive(
                 ['mapping', $this->mapping8],
-                ['language', 'fr'],
                 ['repository', 'user-documentation-v8-fr']
             )
         ;

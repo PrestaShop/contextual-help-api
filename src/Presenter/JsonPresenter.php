@@ -11,44 +11,29 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop\Presenter;
 
-use Help\PrestaShop\RequestInfo;
-use HTMLPurifier;
-use League\CommonMark\GithubFlavoredMarkdownConverter;
-use Twig\Environment;
+use Help\PrestaShop\ProviderInfo;
 
 class JsonPresenter extends HtmlPresenter
 {
-    private string $language;
-
-    public function __construct(
-        Environment $twig,
-        GithubFlavoredMarkdownConverter $converter,
-        HTMLPurifier $purifier,
-        string $language
-    ) {
-        parent::__construct($twig, $converter, $purifier);
-        $this->language = $language;
-    }
-
-    public function canPresentWithRequestInfo(RequestInfo $requestInfo): bool
+    public function canPresentWithProviderInfo(ProviderInfo $providerInfo): bool
     {
-        return !empty($requestInfo->getRequest()['getHelp']);
+        return $providerInfo->getType() === ProviderInfo::TYPE_JSON;
     }
 
-    public function presentContentWithRequestInfo(string $content, RequestInfo $requestInfo): string
+    public function presentContentWithProviderInfo(string $content, ProviderInfo $providerInfo): string
     {
         header('Content-Type: application/json');
 
         $translations = require_once __DIR__ . '/../../config/translations.php';
 
-        if (!empty($requestInfo->getQuery()['callback'])) {
+        if ($providerInfo->getCallback()) {
             $html = $this->twig->render('json.html.twig', [
                 'body' => $this->prepareBody($content),
-                'useful_links' => $translations[$this->language]['useful_links'],
-                'prestaShop_Forum' => $translations[$this->language]['prestaShop_Forum'],
-                'full_doc' => $translations[$this->language]['full_doc'],
+                'useful_links' => $translations[$providerInfo->getLanguage()]['useful_links'],
+                'prestaShop_Forum' => $translations[$providerInfo->getLanguage()]['prestaShop_Forum'],
+                'full_doc' => $translations[$providerInfo->getLanguage()]['full_doc'],
             ]);
-            $html = htmlentities($requestInfo->getQuery()['callback'])
+            $html = htmlentities($providerInfo->getCallback())
                 . '(' . json_encode($html) . ');'
                 . PHP_EOL;
         }

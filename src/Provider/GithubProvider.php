@@ -12,47 +12,37 @@ declare(strict_types=1);
 namespace Help\PrestaShop\Provider;
 
 use GuzzleHttp\Client;
-use Help\PrestaShop\RequestInfo;
+use Help\PrestaShop\ProviderInfo;
 
 class GithubProvider implements ProviderInterface
 {
     private const ENDPOINT = 'https://raw.githubusercontent.com/PrestaShop/%s/master/%s';
-    private const FALLBACK_CONTROLLER = 'GettingStarted';
 
     private Client $client;
-    private string $language;
     private string $repository;
     /** @var string[][] */
     private array $mapping;
 
     /**
      * @param Client $client
-     * @param string $language
      * @param string $repository
      * @param string[][] $mapping
      */
-    public function __construct(Client $client, string $language, string $repository, array $mapping)
+    public function __construct(Client $client, string $repository, array $mapping)
     {
         $this->client = $client;
-        $this->language = $language;
         $this->repository = $repository;
         $this->mapping = $mapping;
     }
 
-    public function getContentFromRequestInfo(RequestInfo $requestInfo): string
+    public function getContentFromProviderInfo(ProviderInfo $providerInfo): string
     {
-        return $this->client->get($this->getUrlFromRequestInfo($requestInfo))->getBody()->getContents();
+        return $this->client->get($this->getUrlFromProviderInfo($providerInfo))->getBody()->getContents();
     }
 
-    private function getUrlFromRequestInfo(RequestInfo $requestInfo): string
+    private function getUrlFromProviderInfo(ProviderInfo $providerInfo): string
     {
-        $controller = $requestInfo->getController();
-
-        if (!isset($this->mapping[$controller])) {
-            $controller = self::FALLBACK_CONTROLLER;
-        }
-
-        $page = $this->mapping[$controller][$this->language];
+        $page = $this->mapping[$providerInfo->getController()][$providerInfo->getLanguage()];
 
         return sprintf(self::ENDPOINT, $this->repository, $page);
     }

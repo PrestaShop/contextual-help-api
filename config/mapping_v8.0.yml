@@ -497,19 +497,19 @@ stock/movements:
   it: 'guida-utente/vendere/gestire-catalogo/gestire-magazzino/movimentazioni-magazzino.md'
 
 AdminShopGroup:
-  en: 'user-guide/managing-multiple-shops/creating-new-shop-group.md'
-  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/creer-groupe-de-boutiques.md'
+  en: 'user-guide/managing-multiple-stores/multistore-interface/adding-new-group-of-stores.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/interface-page-multiboutique/ajouter-groupe-boutiques.md'
   es: 'guia-usuario/gestionar-multiples-tiendas/crear-nuevo-grupo-de-tiendas.md'
   it: 'guida-utente/gestire-negozi-multipli/creare-nuovo-gruppo-negozi.md'
 
 AdminShop:
-  en: 'user-guide/managing-multiple-shops/creating-new-shop.md'
-  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/creer-nouvelle-boutique.md'
+  en: 'user-guide/managing-multiple-stores/multistore-interface/adding-new-store.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/interface-page-multiboutique/ajouter-nouvelle-boutique.md'
   es: 'guia-usuario/gestionar-multiples-tiendas/crear-nueva-tienda.md'
   it: 'guida-utente/gestire-negozi-multipli/creare-nuovo-negozio.md'
 
 AdminShopUrl:
-  en: 'user-guide/managing-multiple-shops/setting-shop-url.md'
-  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/mettre-en-place-url-boutique.md'
+  en: 'user-guide/managing-multiple-stores/multistore-interface/setting-store-url.md'
+  fr: 'guide-utilisateur/gerer-plusieurs-boutiques/interface-page-multiboutique/mettre-en-place-url-boutique.md'
   es: 'guia-usuario/gestionar-multiples-tiendas/configurar-url-tienda.md'
   it: 'guida-utente/gestire-negozi-multipli/impostare-url-negozio.md'

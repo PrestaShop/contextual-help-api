@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop\Presenter;
 
-use Help\PrestaShop\RequestInfo;
+use Help\PrestaShop\ProviderInfo;
 use RuntimeException;
 
 class PresenterBuilder
@@ -27,10 +27,10 @@ class PresenterBuilder
         $this->presenters = $presenters;
     }
 
-    public function getPresenter(RequestInfo $requestInfo): PresenterInterface
+    public function getPresenter(ProviderInfo $providerInfo): PresenterInterface
     {
         foreach ($this->presenters as $presenter) {
-            if ($presenter->canPresentWithRequestInfo($requestInfo)) {
+            if ($presenter->canPresentWithProviderInfo($providerInfo)) {
                 return $presenter;
             }
         }
