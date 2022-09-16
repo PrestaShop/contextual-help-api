@@ -13,6 +13,7 @@ WORKDIR /var/www
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY --from=builder /app /var/www/
 RUN a2enmod rewrite
+RUN a2enmod headers
 RUN apt-get update && \
     apt-get install --force-yes -y vim && \
     rm -rf /var/lib/apt/lists/*
