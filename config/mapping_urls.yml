@@ -1,0 +1,21 @@
+'1.6':
+  gitbook:
+    en: '1-6-documentation/english-documentation'
+  github:
+    en: 'user-documentation-1.6'
+'1.7':
+  github:
+    en: 'user-documentation-en'
+    fr: 'user-documentation-fr'
+    it: 'user-documentation-it'
+    es: 'user-documentation-es'
+  gitbook:
+    en: '1.7-documentation'
+    fr: '1.7-documentation/v/french'
+    it: '1.7-documentation/v/italian'
+    es: '1.7-documentation/v/spanish'
+'8.0':
+  github:
+    en: 'user-documentation-v8-en'
+    fr: 'user-documentation-v8-fr'
+  gitbook:

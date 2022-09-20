@@ -1,19 +1,38 @@
 parameters:
   env(GA_ACCOUNT_KEY): ''
+  env(DOCS_BASE_URL): 'https://docs.prestashop-project.org'
+  docs_base_url: '%env(DOCS_BASE_URL)%'
 
 services:
   _defaults:
     autowire: true
     autoconfigure: true
     bind:
-      $language: '%language%'
       $repository: '%repository%'
       $mapping: '%mapping%'
 
   HTMLPurifier:
     class: HTMLPurifier
 
-  League\CommonMark\GithubFlavoredMarkdownConverter:
+  League\CommonMark\Environment\EnvironmentInterface:
+    alias: League\CommonMark\Environment\Environment
+
+  League\CommonMark\Environment\Environment:
+    arguments:
+      - '%markdown_config%'
+    calls:
+      - addExtension: ['@League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension']
+      - addExtension: ['@League\CommonMark\Extension\FrontMatter\FrontMatterExtension']
+      - addExtension: ['@League\CommonMark\Extension\TaskList\TaskListExtension']
+      - addExtension: ['@League\CommonMark\Extension\Table\TableExtension']
+      - addExtension: ['@Help\PrestaShop\Markdown\GitbookExtension']
+
+  League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension:
+  League\CommonMark\Extension\FrontMatter\FrontMatterExtension:
+  League\CommonMark\Extension\TaskList\TaskListExtension:
+  League\CommonMark\Extension\Table\TableExtension:
+
+  League\CommonMark\MarkdownConverter:
 
   GuzzleHttp\Client:
 

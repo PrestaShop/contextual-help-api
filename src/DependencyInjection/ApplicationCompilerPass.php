@@ -11,6 +11,7 @@ declare(strict_types=1);
 
 namespace Help\PrestaShop\DependencyInjection;
 
+use Help\PrestaShop\ProviderInfo;
 use Help\PrestaShop\RequestInfo;
 use RuntimeException;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -22,6 +23,7 @@ class ApplicationCompilerPass implements CompilerPassInterface
 {
     private const FALLBACK_VERSION = '1.7';
     private const FALLBACK_LANGUAGE = 'en';
+    private const FALLBACK_CONTROLLER = 'GettingStarted';
 
     private string $configDir;
 
@@ -34,16 +36,13 @@ class ApplicationCompilerPass implements CompilerPassInterface
     {
         $requestInfo = RequestInfo::fromRequestUri($_SERVER['REQUEST_URI']);
 
-        $container->set(RequestInfo::class, $requestInfo);
-        $container->setDefinition(RequestInfo::class, (new Definition(RequestInfo::class))->setSynthetic(true));
-
-        $langRepositories = Yaml::parse(file_get_contents($this->getRepositoryMappingFilename()) ?: '');
-        if (!is_array($langRepositories)) {
+        $langUrls = Yaml::parse(file_get_contents($this->getLangUrlsMappingFilename()) ?: '');
+        if (!is_array($langUrls)) {
             throw new RuntimeException('Unable to get the repository mapping');
         }
 
-        krsort($langRepositories);
-        $latestVersion = (string) key($langRepositories);
+        krsort($langUrls);
+        $latestVersion = (string) key($langUrls);
 
         $version = $this->getVersion($requestInfo->getVersion());
         if (!file_exists($this->getMappingFilename($version))) {
@@ -60,13 +59,33 @@ class ApplicationCompilerPass implements CompilerPassInterface
         }
 
         $language = $requestInfo->getLanguage();
-        if (!isset($langRepositories[$version][$language])) {
+        if ($language === null || !isset($langUrls[$version]['github'][$language])) {
             $language = self::FALLBACK_LANGUAGE;
         }
 
+        $controller = $requestInfo->getController();
+        if ($controller === null || !isset($mapping[$controller])) {
+            $controller = self::FALLBACK_CONTROLLER;
+        }
+
+        $providerInfo = new ProviderInfo($requestInfo, $version, $language, $controller);
+        $container->set(ProviderInfo::class, $providerInfo);
+        $container->setDefinition(ProviderInfo::class, (new Definition(ProviderInfo::class))->setSynthetic(true));
+
+        $baseSlug = implode('/', array_slice(explode('/', $mapping[$controller][$language]), 0, -1));
+        $relativeLinkUrl = !isset($langUrls[$version]['gitbook'][$language]) || !is_string($container->getParameter('docs_base_url'))
+            ? null
+            : $container->getParameter('docs_base_url') . '/' . $langUrls[$version]['gitbook'][$language] . '/' . $baseSlug
+        ;
+
         $container->setParameter('mapping', $mapping);
-        $container->setParameter('language', $language);
-        $container->setParameter('repository', $langRepositories[$version][$language]);
+        $container->setParameter('repository', $langUrls[$version]['github'][$language]);
+        $container->setParameter('markdown_config', [
+            'gitbook' => [
+                'relative_link_url' => $relativeLinkUrl,
+                'relative_img_url' => 'https://raw.githubusercontent.com/PrestaShop/' . $langUrls[$version]['github'][$language] . '/master',
+            ],
+        ]);
     }
 
     private function getVersion(?string $version): string
@@ -85,8 +104,8 @@ class ApplicationCompilerPass implements CompilerPassInterface
         return sprintf($this->configDir . '/mapping_v%s.yml', $version);
     }
 
-    private function getRepositoryMappingFilename(): string
+    private function getLangUrlsMappingFilename(): string
     {
-        return $this->configDir . '/mapping_repositories.yml';
+        return $this->configDir . '/mapping_urls.yml';
     }
 }

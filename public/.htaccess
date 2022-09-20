@@ -30,6 +30,7 @@ Options +FollowSymLinks +ExecCGI
 	# Legacy contextual help call this file directly in the Core
 	# This is just a rule so we can put css files together while keeping backward compatibility
 	RewriteRule css/help.css assets/css/help.css [QSA,L]
+	RewriteRule fonts/(.*) assets/fonts/$1 [QSA,L]
 
 	# No, so we redirect to our front web controller
 	RewriteRule ^(.*)$ index.php [QSA,L]

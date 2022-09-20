@@ -10,9 +10,9 @@
 
 namespace Help\PrestaShop\Provider;
 
-use Help\PrestaShop\RequestInfo;
+use Help\PrestaShop\ProviderInfo;
 
 interface ProviderInterface
 {
-    public function getContentFromRequestInfo(RequestInfo $requestInfo): string;
+    public function getContentFromProviderInfo(ProviderInfo $requestInfo): string;
 }
