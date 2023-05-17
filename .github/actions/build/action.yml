@@ -35,7 +35,7 @@ runs:
     - name: Get tag
       shell: bash
       id: get_tag
-      run: echo ::set-output name=TAG::$PREFIX_TAG$(echo $GITHUB_REF | cut -d / -f 3)
+      run: echo TAG=$PREFIX_TAG$(echo $GITHUB_REF | cut -d / -f 3) >> $GITHUB_OUTPUT
       env:
         PREFIX_TAG: ${{ inputs.prefix-tag }}
 
