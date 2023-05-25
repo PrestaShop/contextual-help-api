@@ -45,3 +45,30 @@ PHP >= 8.0.7
 $ composer install
 $ php -S localhost:8080 -t public/
 ```
+
+## Deployment
+
+### Environments
+
+There are 3 targeted environment at the moment:
+
+* **Integration**: integration-help.prestashop-project.org
+* **Préproduction**: preprod-help.prestashop-project.org
+* **Production**: help.prestashop-project.org
+
+Those edge URLs are hosted at the Cloudflare level, proxyfying the origin GCP Storage.
+
+## Architecture
+
+![alt text](pics/architecture.png "Build & Refresh Workflow")
+
+## Workflow
+
+Being on github we'll use the github workflow as follow:
+
+![alt text](pics/workflow.png "Github Workflow")
+
+As you can see from the schema above
+- add the label "integration-deployment" to a Pull Request to trigger the deployment of the integration environment and be able to test it
+- merge a Pull Request against branch `main` to trigger the deployment of the preprod environment and be able to test it
+- publish a GitHub release to trigger the deployment of the production environment
