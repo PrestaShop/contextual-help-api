@@ -45,3 +45,7 @@ PHP >= 8.0.7
 $ composer install
 $ php -S localhost:8080 -t public/
 ```
+
+## Deployment
+
+See the documentation in the `.cloud` folder
