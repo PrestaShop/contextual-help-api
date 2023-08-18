@@ -1,4 +1,4 @@
-# Contextsual Help API
+# Contextual Help API
 
 ## Architecture
 
